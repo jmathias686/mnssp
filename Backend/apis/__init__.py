@@ -1,5 +1,5 @@
 from flask_restplus import Api
-from apis.user import api as ns1
+from .user import api as user_api
 
 api = Api(
     title='My Title',
@@ -8,4 +8,4 @@ api = Api(
     # All API metadatas
 )
 
-api.add_namespace(ns1)
+api.add_namespace(user_api)
