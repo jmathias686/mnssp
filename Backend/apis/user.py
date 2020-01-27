@@ -5,7 +5,9 @@ api = Namespace('Users', description='User related operations')
 user = api.model('user', {
     'id': fields.Integer(readonly=True, description='The user unique identifier'),
     'firstName': fields.String(required=True, description='The user first name'),
-    'lastName' : fields.String(required=True, description='The user last name')
+    'lastName' : fields.String(required=True, description='The user last name'),
+    'email' : fields.String(required=True, description='the user email address'),
+    'attending': fields.Boolean(description='If user will attend next event')
 })
 
 
@@ -20,11 +22,25 @@ class UserDAO(object):
                 return usr
         api.abort(404, "User {} doesn't exist".format(id))
 
+    def getAttending(self):
+        attendance = []
+        for usr in self.User:
+            if usr['attending'] == "true":
+                attendance.append(usr)
+        return attendance    
+
     def create(self, data):
         usr = data
         usr['id'] = self.counter = self.counter + 1
+        if 'attending' not in usr:
+            usr['attending'] = "false"
         self.User.append(usr)
         return usr
+
+    # def updateAttending(self, id, attendance):
+    #     usr = self.get(id)
+    #     usr['attending'] = attendance
+    #     return usr
 
     def update(self, id, data):
         usr = self.get(id)
@@ -37,11 +53,11 @@ class UserDAO(object):
 
 
 USERS = UserDAO()
-USERS.create({'firstName': 'External', 'lastName': 'Stub'})
-USERS.create({'firstName': 'Mule', 'lastName': 'Soft'})
-USERS.create({'firstName': 'Any', 'lastName': 'Point'})
-USERS.create({'firstName': 'Post', 'lastName': 'Man'})
-USERS.create({'firstName': 'Smart', 'lastName': 'Stub'})
+USERS.create({'firstName': 'External', 'lastName': 'Stub', 'email': 'extstub@gmaill.com'})
+USERS.create({'firstName': 'Mule', 'lastName': 'Soft', 'email': 'msoft@gmaill.com', 'attending': True})
+USERS.create({'firstName': 'Any', 'lastName': 'Point', 'email': 'anyp@gmaill.com'})
+USERS.create({'firstName': 'Post', 'lastName': 'Man', 'email': 'pmpat@gmaill.com'})
+USERS.create({'firstName': 'Smart', 'lastName': 'Stub', 'email': 'bigbrain@gmaill.com'})
 
 
 
@@ -49,7 +65,7 @@ USERS.create({'firstName': 'Smart', 'lastName': 'Stub'})
 
 @api.route('/')
 class UserList(Resource):
-    '''Shows a list of all users, and lets you post new users?'''
+    '''Shows a list of all users and create new users'''
     @api.doc('list_users')
     @api.marshal_list_with(user)
     def get(self):
@@ -82,3 +98,21 @@ class User(Resource):
         USERS.delete(id)
         return '', 204
         # api.abort(404)
+
+    @api.doc('update_user')
+    @api.marshal_with(user)
+    def put(self,id):
+        '''Update user data'''
+        return USERS.update(id, api.payload)
+    
+
+@api.route('/attending')
+class Attending(Resource):
+    @api.doc('get_list_of_attending_users')
+    @api.marshal_list_with(user)
+    def get(self):
+        '''List all users attending'''
+        return USERS.getAttending()
+
+    
+
