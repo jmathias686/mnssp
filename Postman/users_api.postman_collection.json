@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "9595900e-f83b-4f0a-a860-07710db0577e",
+		"name": "users_api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get all users",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Users",
+						""
+					]
+				},
+				"description": "this request gets all users in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Specific User via ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Users/{{id}}",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Users",
+						"{{id}}"
+					]
+				},
+				"description": "this request gets all users in the database"
+			},
+			"response": []
+		},
+		{
+			"name": "Post new user",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\t{\n\t\t\"firstName\" : \"boi\",\n\t\t\"lastName\" : \"my dude\",\n\t\t\"email\" : \"boimd@smartstub.com\"\n\t}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Users",
+						""
+					]
+				},
+				"description": "Adds new user to database"
+			},
+			"response": []
+		},
+		{
+			"name": "Put - Update user",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "\n\t{\n\t\t\"firstName\" : \"boi\",\n\t\t\"lastName\" : \"my dude\",\n\t\t\"email\" : \"boimd@smartstub.com\",\n\t\t\"attending\" : \"true\"\n\t}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Users/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Users",
+						"6"
+					]
+				},
+				"description": "Given ID parameter, updates information for that user"
+			},
+			"response": []
+		},
+		{
+			"name": "Get attendance",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/Users/attending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"Users",
+						"attending"
+					]
+				},
+				"description": "Gets all users with true for attendance"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
