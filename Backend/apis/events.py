@@ -1,8 +1,8 @@
 from flask_restplus import Namespace, Resource, fields
 
-api = Namespace('user', description='Cats related operations')
+api = Namespace('events', description='Cats related operations')
 
-user = api.model('user', {
+events = api.model('events', {
     'id': fields.String(required=True, description='The cat identifier'),
     'name': fields.String(required=True, description='The cat name'),
 })
@@ -14,7 +14,7 @@ CATS = [
 @api.route('/')
 class CatList(Resource):
     @api.doc('list_cats')
-    @api.marshal_list_with(user)
+    @api.marshal_list_with(events)
     def get(self):
         '''List all cats'''
         return CATS
@@ -24,7 +24,7 @@ class CatList(Resource):
 @api.response(404, 'Cat not found')
 class Cat(Resource):
     @api.doc('get_cat')
-    @api.marshal_with(user)
+    @api.marshal_with(events)
     def get(self, id):
         '''Fetch a cat given its identifier'''
         for cat in CATS:

@@ -1,5 +1,5 @@
 from flask_restplus import Api
-from apis.user import api as ns1
+from .user import api as ns1
 
 api = Api(
     title='My Title',
