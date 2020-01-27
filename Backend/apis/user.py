@@ -45,6 +45,8 @@ USERS.create({'firstName': 'Smart', 'lastName': 'Stub'})
 
 
 
+
+
 @api.route('/')
 class UserList(Resource):
     '''Shows a list of all users, and lets you post new users?'''
@@ -54,16 +56,29 @@ class UserList(Resource):
         '''List all users'''
         return USERS.User
 
-@api.route('/<id>')
+    @api.doc('create_user')
+    @api.expect(user)
+    @api.marshal_with(user, code=201)
+    def post(self):
+        '''Create a new User'''
+        return USERS.create(api.payload), 201
+
+
+@api.route('/<int:id>')
 @api.param('id', 'The users unique identifier')
 @api.response(404, 'User not found')
 class User(Resource):
+    '''Show a single user and can update/delete users'''
     @api.doc('get_user')
     @api.marshal_with(user)
     def get(self, id):
         '''Fetch a user given its identifier'''
-        # for usr in User
-        #     if usr['id'] == id:
-        #         return usr
         return USERS.get(id)
-        api.abort(404)
+
+    @api.doc('delete_user')
+    @api.response(204, 'User deleted')
+    def delete(self, id):
+        '''Delete a user given its identifier'''
+        USERS.delete(id)
+        return '', 204
+        # api.abort(404)
