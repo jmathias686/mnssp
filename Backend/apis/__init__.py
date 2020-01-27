@@ -1,5 +1,6 @@
 from flask_restplus import Api
 from .user import api as ns1
+from .events import api as ns2
 
 api = Api(
     title='My Title',
@@ -9,3 +10,4 @@ api = Api(
 )
 
 api.add_namespace(ns1)
+api.add_namespace(ns2)
