@@ -1,15 +1,25 @@
-from flask_restplus import Namespace, Resource, fields
+from flask_restplus import Namespace, Resource, fields, reqparse
+#NOTE: reqparse will be removed eventually, so a different parser might need to be implemented later
 
 api = Namespace('Users', description='User related operations')
 
-user = api.model('user', {
-    'id': fields.Integer(readonly=True, description='The user unique identifier'),
-    'firstName': fields.String(required=True, description='The user first name'),
-    'lastName' : fields.String(required=True, description='The user last name'),
-    'email' : fields.String(required=True, description='the user email address'),
-    'attending': fields.Boolean(description='If user will attend next event')
+
+names = api.model('names', {
+    'firstName': fields.String(required=True, description='User first name'),
+    'lastName' : fields.String(required=True, description='User last name')
 })
 
+
+user = api.model('user', {
+    'id': fields.Integer(readonly=True, description='User unique ID'),
+    'firstName': fields.String(required=True, description='User first name'),
+    'lastName' : fields.String(required=True, description='User last name'),
+    'email' : fields.String(required=True, description='User Email address'),
+    'attending': fields.Boolean(description='If User attending next event'),
+    'vote' : fields.String(default="NaN", description='What movie User has voted on') #could change to Id corresponding to movieDB or something?
+})
+
+email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
 
 class UserDAO(object):
     def __init__(self):
@@ -25,7 +35,7 @@ class UserDAO(object):
     def getAttending(self):
         attendance = []
         for usr in self.User:
-            if usr['attending'] == "true":
+            if usr['attending'] == True:
                 attendance.append(usr)
         return attendance    
 
@@ -33,7 +43,7 @@ class UserDAO(object):
         usr = data
         usr['id'] = self.counter = self.counter + 1
         if 'attending' not in usr:
-            usr['attending'] = "false"
+            usr['attending'] = False
         self.User.append(usr)
         return usr
 
@@ -51,6 +61,19 @@ class UserDAO(object):
         usr = self.get(id)
         self.User.remove(usr)
 
+    def getEmails(self):
+        email = []
+        for usr in self.User:
+            if usr['email'] is not None:
+                email.append(usr)
+        return email
+
+    def getEmailInd(self,id):
+        for usr in self.User:
+            if usr['id'] == id:
+                return usr['user']['email']
+        api.abort(404, "User {} doesn't exist".format(id))
+
 
 USERS = UserDAO()
 USERS.create({'firstName': 'External', 'lastName': 'Stub', 'email': 'extstub@gmaill.com'})
@@ -67,7 +90,7 @@ USERS.create({'firstName': 'Smart', 'lastName': 'Stub', 'email': 'bigbrain@gmail
 class UserList(Resource):
     '''Shows a list of all users and create new users'''
     @api.doc('list_users')
-    @api.marshal_list_with(user)
+    @api.marshal_list_with(user, envelope="User_list")
     def get(self):
         '''List all users'''
         return USERS.User
@@ -96,7 +119,7 @@ class User(Resource):
     def delete(self, id):
         '''Delete a user given its identifier'''
         USERS.delete(id)
-        return '', 204
+        return {"User {}".format(id) : "deleted"}, 204
         # api.abort(404)
 
     @api.doc('update_user')
@@ -114,5 +137,28 @@ class Attending(Resource):
         '''List all users attending'''
         return USERS.getAttending()
 
+    @api.doc('Update attendance of specific user')
+    @api.marshal_with(user)
+    @api.expect(user)
+    def post(self):
+        # usr = USERS.get(id)
+        return USERS.get(id)
+
     
+@api.route('/emails')
+class Emails(Resource):
+    @api.doc('get_user_emails')
+    @api.marshal_with(email, envelope="Email_list")
+    def get(self):
+        '''List all user emails'''
+        return USERS.User
+
+
+@api.route('/emails/<int:id>')
+class singleEmail(Resource):
+    @api.doc('get_specific_email')
+    @api.marshal_with(email)
+    def get(self,id):
+        '''Show specific user email'''
+        return USERS.get(id)
 
