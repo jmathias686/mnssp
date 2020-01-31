@@ -63,7 +63,7 @@ USERS.create({'name' : 'eee'})
 
 
 EVENTS = UserDAO()
-EVENTS.create({'move': 'BadBois4Lyf', 'date': '12/1/17', 'attendees' : USERS.User})
+EVENTS.create({'movie': 'BadBois4Lyf', 'date': '12/1/17', 'attendees' : USERS.User})
 
 
 
