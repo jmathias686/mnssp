@@ -1,6 +1,6 @@
 from flask_restplus import Namespace, Resource, fields
 
-api = Namespace('Events', description='Cats related operations')
+api = Namespace('Events', description='Events related operations')
 
 
 address = api.model('address', {
@@ -11,13 +11,19 @@ address = api.model('address', {
     'postcode' : fields.String(default='2000'),
 })
 
+users_attending = api.model('users', {
+    'user_id' : fields.Integer(attribute='id',readonly=True)
+})
 
-events = api.model('events', {
+events = api.model('event', {
     'id': fields.String(readonly=True, description='The event identifier'),
     'movie' : fields.String(required=True, description='The movie name'),
-    'location' : fields.Nested(address),
-    'date' : fields.DateTime(dt_format='rfc822'),
+    'location' : fields.Nested(address,description='The location of movie'),
+    'date' : fields.String(required=True,description='The date of movie'),
+    'time' : fields.String(required=True, default='12:00', description='The time of movie'),
+    'attendees' : fields.List(fields.Nested(users_attending), description='The list of attendees'),
 })
+
 
 
 
@@ -31,11 +37,10 @@ class UserDAO(object):
             if usr['id'] == id:
                 return usr
         api.abort(404, "User {} doesn't exist".format(id))
+
     def create(self, data):
         usr = data
         usr['id'] = self.counter = self.counter + 1
-        if 'attending' not in usr:
-            usr['attending'] = False
         self.User.append(usr)
         return usr
 
@@ -49,12 +54,16 @@ class UserDAO(object):
         self.User.remove(usr)
 
 
+USERS = UserDAO()
+USERS.create({'name' : 'aaa'})
+USERS.create({'name' : 'bbb'})
+USERS.create({'name' : 'ccc'})
+USERS.create({'name' : 'ddd'})
+USERS.create({'name' : 'eee'})
 
 
-
-CATS = [
-    {'id': 'felix', 'name': 'Felix'},
-]
+EVENTS = UserDAO()
+EVENTS.create({'move': 'BadBois4Lyf', 'date': '12/1/17', 'attendees' : USERS.User})
 
 
 
@@ -62,20 +71,20 @@ CATS = [
 
 @api.route('/')
 class CatList(Resource):
-    @api.doc('list_cats')
+    @api.doc('list_events')
     @api.marshal_list_with(events)
     def get(self):
-        '''List all cats'''
-        return CATS
+        '''List all events'''
+        return EVENTS.User
 
 @api.route('/<id>')
-@api.param('id', 'The cat identifier')
-@api.response(404, 'Cat not found')
+@api.param('id', 'The Event identifier')
+@api.response(404, 'Event not found')
 class Cat(Resource):
     @api.doc('get_cat')
     @api.marshal_with(events)
     def get(self, id):
-        '''Fetch a cat given its identifier'''
+        '''Fetch an event given its identifier'''
         for cat in CATS:
             if cat['id'] == id:
                 return cat
