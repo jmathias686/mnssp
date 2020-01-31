@@ -1,6 +1,6 @@
 from flask_restplus import Namespace, Resource, fields
 
-api = Namespace('events', description='Cats related operations')
+api = Namespace('poll', description='Cats related operations')
 
 events = api.model('events', {
     'id': fields.String(required=True, description='The cat identifier'),
