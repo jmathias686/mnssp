@@ -21,10 +21,9 @@ events = api.model('event', {
     'location' : fields.Nested(address,description='The location of movie'),
     'date' : fields.String(required=True,description='The date of movie'),
     'time' : fields.String(required=True, default='12:00', description='The time of movie'),
+    'no_attend' : fields.Integer(required=True, description='The number of attendees'),
     'attendees' : fields.List(fields.Nested(users_attending), description='The list of attendees'),
 })
-
-
 
 
 class UserDAO(object):
@@ -55,37 +54,86 @@ class UserDAO(object):
 
 
 USERS = UserDAO()
+
 USERS.create({'name' : 'aaa'})
 USERS.create({'name' : 'bbb'})
 USERS.create({'name' : 'ccc'})
 USERS.create({'name' : 'ddd'})
-USERS.create({'name' : 'eee'})
 
 
-EVENTS = UserDAO()
-EVENTS.create({'movie': 'BadBois4Lyf', 'date': '12/1/17', 'attendees' : USERS.User})
+
+
+
+
+class EventsDAO(object):
+    def __init__(self):
+        self.counter = 0
+        self.Event = []
+
+    def get(self, id):
+        for ind in self.Event:
+            if ind['id'] == id:
+                return ind
+        api.abort(404, "Event {} doesn't exist".format(id))
+
+    def create(self, data):
+        ind = data
+        ind['id'] = self.counter = self.counter + 1
+        ind['no_attend'] = len(USERS.User)
+        ind['attendees'] = USERS.User
+        self.Event.append(ind)
+        return ind
+
+    def update(self, id, data):
+        ind = self.get(id)
+        ind.update(data)
+        return ind
+
+    def delete(self, id):
+        ind = self.get(id)
+        self.Event.remove(ind)
+
+
+EVENTS = EventsDAO()
+EVENTS.create({'movie': 'BadBois4Lyf', 'date': '12/1/17'})
 
 
 
 
 
 @api.route('/')
-class CatList(Resource):
+class EventList(Resource):
     @api.doc('list_events')
     @api.marshal_list_with(events)
     def get(self):
         '''List all events'''
-        return EVENTS.User
+        return EVENTS.Event
 
-@api.route('/<id>')
+    @api.doc('create_event')
+    @api.expect(events)
+    @api.marshal_with(events, code=201)
+    def post(self):
+        '''Create a new Event'''
+        return EVENTS.create(api.payload), 201
+
+
+@api.route('/current')
+class Event(Resource):
+    @api.doc('get_event')
+    @api.marshal_with(events)
+    def get(self):
+        '''Get current event'''
+        id = EVENTS.counter
+        return EVENTS.get(id)
+
+
+@api.route('/<int:id>')
 @api.param('id', 'The Event identifier')
 @api.response(404, 'Event not found')
-class Cat(Resource):
-    @api.doc('get_cat')
+class EventSpecific(Resource):
+    @api.doc('get_specific_event')
     @api.marshal_with(events)
     def get(self, id):
-        '''Fetch an event given its identifier'''
-        for cat in CATS:
-            if cat['id'] == id:
-                return cat
+        '''Get specific event given identifier - for past events'''
+        return EVENTS.get(id)
         api.abort(404)

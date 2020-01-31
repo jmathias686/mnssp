@@ -20,6 +20,7 @@ user = api.model('user', {
 
 email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
 
+
 class UserDAO(object):
     def __init__(self):
         self.counter = 0
