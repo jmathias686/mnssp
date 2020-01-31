@@ -9,14 +9,13 @@ names = api.model('names', {
     'lastName' : fields.String(required=True, description='User last name')
 })
 
-
 user = api.model('user', {
     'id': fields.Integer(readonly=True, description='User unique ID'),
     'firstName': fields.String(required=True, description='User first name'),
     'lastName' : fields.String(required=True, description='User last name'),
     'email' : fields.String(required=True, description='User Email address'),
     'attending': fields.Boolean(description='If User attending next event'),
-    'vote' : fields.String(default="NaN", description='What movie User has voted on') #could change to Id corresponding to movieDB or something?
+    'vote' : fields.Integer(default=-1, description='What movie User has voted on')
 })
 
 email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
@@ -35,7 +34,7 @@ class UserDAO(object):
     def getAttending(self):
         attendance = []
         for usr in self.User:
-            if usr['attending'] == True:
+            if usr['attending'] == True or usr['attending'] == 'true':
                 attendance.append(usr)
         return attendance    
 
@@ -129,6 +128,8 @@ class User(Resource):
         return USERS.update(id, api.payload)
     
 
+
+
 @api.route('/attending')
 class Attending(Resource):
     @api.doc('get_list_of_attending_users')
@@ -137,14 +138,16 @@ class Attending(Resource):
         '''List all users attending'''
         return USERS.getAttending()
 
-    @api.doc('Update attendance of specific user')
-    @api.marshal_with(user)
-    @api.expect(user)
-    def post(self):
-        # usr = USERS.get(id)
-        return USERS.get(id)
+    # @api.doc('Update attendance of specific user')
+    # @api.marshal_with(user)
+    # @api.expect(user)
+    # def post(self):
+    #     # usr = USERS.get(id)
+    #     return USERS.get(id)
 
     
+
+
 @api.route('/emails')
 class Emails(Resource):
     @api.doc('get_user_emails')
