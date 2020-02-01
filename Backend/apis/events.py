@@ -3,7 +3,7 @@ from flask_restplus import Namespace, Resource, fields
 api = Namespace('Events', description='Events related operations')
 
 
-address = api.model('address', {
+address = api.model('Address', {
     'address_1' : fields.String(default='505/525 George St'),
     'address_2' : fields.String(default=''),
     'city' : fields.String(default='Sydney'),
@@ -11,18 +11,27 @@ address = api.model('address', {
     'postcode' : fields.String(default='2000'),
 })
 
-users_attending = api.model('users', {
-    'user_id' : fields.Integer(attribute='id',readonly=True)
+user_names = api.model('User Names', {
+    #'id' is hidden value not to be passed through
+    'first_name': fields.String(required=True, description='User first name'),
+    'last_name' : fields.String(required=True, description='User last name'),
 })
 
-events = api.model('event', {
-    'id': fields.String(readonly=True, description='The event identifier'),
+
+events = api.model('Event', {
+    'event_id': fields.Integer(attribute='id',readonly=True, description='The event identifier'),
     'movie' : fields.String(required=True, description='The movie name'),
     'location' : fields.Nested(address,description='The location of movie'),
     'date' : fields.String(required=True,description='The date of movie'),
-    'time' : fields.String(required=True, default='12:00', description='The time of movie'),
-    'no_attend' : fields.Integer(required=True, description='The number of attendees'),
-    'attendees' : fields.List(fields.Nested(users_attending), description='The list of attendees'),
+    'time' : fields.String(default='12:00', description='The time of movie'),
+    'no_attend' : fields.Integer(description='The number of attendees'),
+    'attendees' : fields.List(fields.Nested(user_names), description='The list of attendees'),
+})
+
+event_input = api.model('New event input', {
+    'movie' : fields.String(required=True, description='The movie name'),
+    'date' : fields.String(required=True,description='The date of movie'),
+    'time' : fields.String(default='12:00', description='The time of movie'),
 })
 
 
@@ -54,11 +63,10 @@ class UserDAO(object):
 
 
 USERS = UserDAO()
-
-USERS.create({'name' : 'aaa'})
-USERS.create({'name' : 'bbb'})
-USERS.create({'name' : 'ccc'})
-USERS.create({'name' : 'ddd'})
+USERS.create({'first_name': 'External', 'last_name': 'Stub', 'email': 'extstub@gmaill.com'})
+USERS.create({'first_name': 'Mule', 'last_name': 'Soft', 'email': 'msoft@gmaill.com'})
+USERS.create({'first_name': 'Any', 'last_name': 'Point', 'email': 'anyp@gmaill.com'})
+USERS.create({'first_name': 'Post', 'last_name': 'Man', 'email': 'pmpat@gmaill.com'})
 
 
 
@@ -79,8 +87,8 @@ class EventsDAO(object):
     def create(self, data):
         ind = data
         ind['id'] = self.counter = self.counter + 1
-        ind['no_attend'] = len(USERS.User)
         ind['attendees'] = USERS.User
+        ind['no_attend'] = len(ind['attendees'])
         self.Event.append(ind)
         return ind
 
@@ -107,13 +115,17 @@ class EventList(Resource):
     @api.marshal_list_with(events)
     def get(self):
         '''List all events'''
+        for ind in EVENTS.Event:
+            ind['no_attend'] = len(ind['attendees'])
+
         return EVENTS.Event
 
     @api.doc('create_event')
-    @api.expect(events)
+    @api.expect(event_input)
     @api.marshal_with(events, code=201)
     def post(self):
         '''Create a new Event'''
+        USERS.create({'first_name': 'Smart', 'last_name': 'Stub', 'email': 'bigbrain@gmaill.com'})
         return EVENTS.create(api.payload), 201
 
 
@@ -124,7 +136,9 @@ class Event(Resource):
     def get(self):
         '''Get current event'''
         id = EVENTS.counter
-        return EVENTS.get(id)
+        ind = EVENTS.get(id)
+        ind['no_attend'] = len(ind['attendees'])
+        return ind
 
 
 @api.route('/<int:id>')
@@ -135,5 +149,20 @@ class EventSpecific(Resource):
     @api.marshal_with(events)
     def get(self, id):
         '''Get specific event given identifier - for past events'''
-        return EVENTS.get(id)
+        ind = EVENTS.get(id)
+        ind['no_attend'] = len(ind['attendees'])
+        return ind
         api.abort(404)
+
+
+@api.route('/attendees/<int:id>')
+@api.param('id', 'The Event identifier')
+@api.response(404, 'Event not found')
+class Attendees(Resource):
+    @api.doc('get_attendees_of_event')
+    @api.marshal_with(user_names)
+    def get(self,id):
+        '''Get list of attendees for specific event'''
+        return EVENTS.get(id)['attendees']
+        api.abort(404)
+
