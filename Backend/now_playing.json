@@ -1,0 +1,407 @@
+{
+    "dates": {
+        "maximum": "2020-02-07",
+        "minimum": "2019-12-21"
+    },
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/tJgmraUAmVlJPlq72yC76tKDyC4.jpg",
+            "genre_ids": [
+                18,
+                36,
+                10752
+            ],
+            "id": 530915,
+            "original_language": "en",
+            "original_title": "1917",
+            "overview": "At the height of the First World War, two young British soldiers, Schofield and Blake are given a seemingly impossible mission. In a race against time, they must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers\u2014Blake's own brother among them.",
+            "popularity": 215.046,
+            "poster_path": "/iZf0KyrE25z1sage4SYFLCCrMi9.jpg",
+            "release_date": "2020-01-09",
+            "title": "1917",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 1604
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/iUspPEAjhUUrLYKntTnKupt3eqV.jpg",
+            "genre_ids": [
+                28,
+                80,
+                53
+            ],
+            "id": 38700,
+            "original_language": "en",
+            "original_title": "Bad Boys for Life",
+            "overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.",
+            "popularity": 180.005,
+            "poster_path": "/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg",
+            "release_date": "2020-01-16",
+            "title": "Bad Boys for Life",
+            "video": false,
+            "vote_average": 6.6,
+            "vote_count": 463
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zTxHf9iIOCqRbxvl8W5QYKrsMLq.jpg",
+            "genre_ids": [
+                28,
+                12,
+                35,
+                14
+            ],
+            "id": 512200,
+            "original_language": "en",
+            "original_title": "Jumanji: The Next Level",
+            "overview": "As the gang return to Jumanji to rescue one of their own, they discover that nothing is as they expect. The players will have to brave parts unknown and unexplored in order to escape the world\u2019s most dangerous game.",
+            "popularity": 68.208,
+            "poster_path": "/jyw8VKYEiM1UDzPB7NsisUgBeJ8.jpg",
+            "release_date": "2019-12-26",
+            "title": "Jumanji: The Next Level",
+            "video": false,
+            "vote_average": 6.7,
+            "vote_count": 1350
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/agoBZfL1q5G79SD0npArSlJn8BH.jpg",
+            "genre_ids": [
+                35,
+                18,
+                10752
+            ],
+            "id": 515001,
+            "original_language": "en",
+            "original_title": "Jojo Rabbit",
+            "overview": "A World War II satire that follows a lonely German boy whose world view is turned upside down when he discovers his single mother is hiding a young Jewish girl in their attic. Aided only by his idiotic imaginary friend, Adolf Hitler, Jojo must confront his blind nationalism.",
+            "popularity": 80.816,
+            "poster_path": "/7GsM4mtM0worCtIVeiQt28HieeN.jpg",
+            "release_date": "2019-12-26",
+            "title": "Jojo Rabbit",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 1022
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/xJWPZIYOEFIjZpBL7SVBGnzRYXp.jpg",
+            "genre_ids": [
+                12,
+                16,
+                10402,
+                10751
+            ],
+            "id": 330457,
+            "original_language": "en",
+            "original_title": "Frozen II",
+            "overview": "Elsa, Anna, Kristoff and Olaf head far into the forest to learn the truth about an ancient mystery of their kingdom.",
+            "popularity": 73.723,
+            "poster_path": "/pjeMs3yqRmFL3giJy4PMXWZTTPa.jpg",
+            "release_date": "2019-12-28",
+            "title": "Frozen II",
+            "video": false,
+            "vote_average": 7,
+            "vote_count": 2046
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/3uTxPIdVEXxHpsHOHdJC24QebBV.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 331482,
+            "original_language": "en",
+            "original_title": "Little Women",
+            "overview": "Four sisters come of age in America in the aftermath of the Civil War.",
+            "popularity": 63.075,
+            "poster_path": "/wE5aZnk43mWV3BKh7Cv3vODTXro.jpg",
+            "release_date": "2020-01-01",
+            "title": "Little Women",
+            "video": false,
+            "vote_average": 8,
+            "vote_count": 826
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lG802rseTZcN9mtLsQPVfApEVzM.jpg",
+            "genre_ids": [
+                28,
+                12,
+                35,
+                14,
+                10751
+            ],
+            "id": 448119,
+            "original_language": "en",
+            "original_title": "Dolittle",
+            "overview": "After losing his wife seven years earlier, the eccentric Dr. John Dolittle, famed doctor and veterinarian of Queen Victoria\u2019s England, hermits himself away behind the high walls of Dolittle Manor with only his menagerie of exotic animals for company. But when the young queen falls gravely ill, a reluctant Dolittle is forced to set sail on an epic adventure to a mythical island in search of a cure, regaining his wit and courage as he crosses old adversaries and discovers wondrous creatures.",
+            "popularity": 52.088,
+            "poster_path": "/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg",
+            "release_date": "2020-01-16",
+            "title": "Dolittle",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 118
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/qlYxtqVfu2LOdvYMMDPCSGX0Oz0.jpg",
+            "genre_ids": [
+                28,
+                12,
+                16,
+                35
+            ],
+            "id": 431693,
+            "original_language": "en",
+            "original_title": "Spies in Disguise",
+            "overview": "When the world's best spy is turned into a pigeon, he must rely on his nerdy tech officer to save the world.",
+            "popularity": 30.87,
+            "poster_path": "/30YacPAcxpNemhhwX0PVUl9pVA3.jpg",
+            "release_date": "2020-01-01",
+            "title": "Spies in Disguise",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 133
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/AgYlP6g4vrNn1sVsAIvflW3TfJU.jpg",
+            "genre_ids": [
+                16,
+                35,
+                10751
+            ],
+            "id": 422803,
+            "original_language": "en",
+            "original_title": "A Shaun the Sheep Movie: Farmageddon",
+            "overview": "When an alien with amazing powers crash-lands near Mossy Bottom Farm, Shaun the Sheep goes on a mission to shepherd the intergalactic visitor home before a sinister organization can capture her.",
+            "popularity": 37.467,
+            "poster_path": "/p08FoXVFgcRm5QZBaGj0VKa2W2Y.jpg",
+            "release_date": "2020-01-09",
+            "title": "A Shaun the Sheep Movie: Farmageddon",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 36
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/9Qfawg9WT3cSbBXQgDRuWbYS9lj.jpg",
+            "genre_ids": [
+                28,
+                35,
+                80
+            ],
+            "id": 522627,
+            "original_language": "en",
+            "original_title": "The Gentlemen",
+            "overview": "American expat Mickey Pearson has built a highly profitable marijuana empire in London. When word gets out that he\u2019s looking to cash out of the business forever it triggers plots, schemes, bribery and blackmail in an attempt to steal his domain out from under him.",
+            "popularity": 36.032,
+            "poster_path": "/jtrhTYB7xSrJxR1vusu99nvnZ1g.jpg",
+            "release_date": "2020-01-01",
+            "title": "The Gentlemen",
+            "video": false,
+            "vote_average": 7.5,
+            "vote_count": 85
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/fYPiQewg7ogbzro2XcCTACSB2KC.jpg",
+            "genre_ids": [
+                27,
+                878,
+                53
+            ],
+            "id": 443791,
+            "original_language": "en",
+            "original_title": "Underwater",
+            "overview": "After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time.",
+            "popularity": 29.431,
+            "poster_path": "/jlHL2BH176JApGiLnNQLQgdjMFd.jpg",
+            "release_date": "2020-01-23",
+            "title": "Underwater",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 154
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/nj84vpuUWdbmYktBzjiWn5Ny1ZF.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 525661,
+            "original_language": "en",
+            "original_title": "Bombshell",
+            "overview": "Bombshell is a revealing look inside the most powerful and controversial media empire of all time; and the explosive story of the women who brought down the infamous man who created it.",
+            "popularity": 25.726,
+            "poster_path": "/gbPfvwBqbiHpQkYZQvVwB6MVauV.jpg",
+            "release_date": "2020-01-01",
+            "title": "Bombshell",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 218
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/4F8M02OjkfDIIBg36R5ZluLK2nU.jpg",
+            "genre_ids": [
+                35,
+                18,
+                14
+            ],
+            "id": 536869,
+            "original_language": "en",
+            "original_title": "Cats",
+            "overview": "A tribe of cats called the Jellicles must decide yearly which one will ascend to the Heaviside Layer and come back to a new Jellicle life.",
+            "popularity": 29.543,
+            "poster_path": "/d6tfbsrZr4QPDHp7PlD0Z4ngIAs.jpg",
+            "release_date": "2019-12-26",
+            "title": "Cats",
+            "video": false,
+            "vote_average": 4.6,
+            "vote_count": 177
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/zNqsGEWHlXwFw8wod0HDkgrvsl8.jpg",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "id": 522212,
+            "original_language": "en",
+            "original_title": "Just Mercy",
+            "overview": "The powerful true story of Harvard-educated lawyer Bryan Stevenson, who goes to Alabama to defend the disenfranchised and wrongly condemned \u2014 including Walter McMillian, a man sentenced to death despite evidence proving his innocence. Bryan fights tirelessly for Walter with the system stacked against them.",
+            "popularity": 29.867,
+            "poster_path": "/4YJNp1cquIkX8JxFwkKNEFQ9tgr.jpg",
+            "release_date": "2020-01-16",
+            "title": "Just Mercy",
+            "video": false,
+            "vote_average": 8.1,
+            "vote_count": 78
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/joXf2ToDZjVMBxWrzijQ3V9cC8p.jpg",
+            "genre_ids": [
+                18,
+                10749
+            ],
+            "id": 531428,
+            "original_language": "fr",
+            "original_title": "Portrait de la jeune fille en feu",
+            "overview": "On an isolated island in Brittany at the end of the eighteenth century, a female painter is obliged to paint a wedding portrait of a young woman.",
+            "popularity": 25.525,
+            "poster_path": "/3NTEMlG5mQdIAlKDl3AJG0rX29Z.jpg",
+            "release_date": "2019-12-26",
+            "title": "Portrait of a Lady on Fire",
+            "video": false,
+            "vote_average": 8.3,
+            "vote_count": 244
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/h4x5aN52nq78PM8zXD77THhZTB.jpg",
+            "genre_ids": [
+                27,
+                9648
+            ],
+            "id": 465086,
+            "original_language": "en",
+            "original_title": "The Grudge",
+            "overview": "After a young mother murders her family in her own house, a detective attempts to investigate the mysterious case, only to discover that the house is cursed by a vengeful ghost. Now targeted by the demonic spirits, the detective must do anything to protect herself and her family from harm.",
+            "popularity": 17.053,
+            "poster_path": "/vN7JHlHOT9rHNDU27tfYqhABBj5.jpg",
+            "release_date": "2020-01-30",
+            "title": "The Grudge",
+            "video": false,
+            "vote_average": 5.4,
+            "vote_count": 86
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/q2WOOT93h9SJ9l3Gc3IkGRqH5ic.jpg",
+            "genre_ids": [
+                80,
+                18
+            ],
+            "id": 501395,
+            "original_language": "en",
+            "original_title": "True History of the Kelly Gang",
+            "overview": "Set against the badlands of colonial Australia where the English rule with a bloody fist and the Irish endure, Ned Kelly discovers he comes from a line of Irish rebels\u2014an uncompromising army of cross dressing bandits immortalised for terrorising their oppressors back in Ireland. Nurtured by the notorious bushranger, Harry Power and fuelled by the unfair arrest of his mother, Kelly recruits a wild bunch of warriors to plot one of the most audacious attacks of anarchy and rebellion the country has ever seen.",
+            "popularity": 13.336,
+            "poster_path": "/eVyESHnWiTY1el8DEWbYMVW3K5k.jpg",
+            "release_date": "2020-01-09",
+            "title": "True History of the Kelly Gang",
+            "video": false,
+            "vote_average": 8.7,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/w0tJot6O0UtLVBRIPAdg3dQ2oNO.jpg",
+            "genre_ids": [
+                18,
+                36
+            ],
+            "id": 501907,
+            "original_language": "en",
+            "original_title": "A Beautiful Day in the Neighborhood",
+            "overview": "An award-winning cynical journalist, Lloyd Vogel, begrudgingly accepts an assignment to write an Esquire profile piece on the beloved television icon Fred Rogers. After his encounter with Rogers, Vogel's perspective on life is transformed.",
+            "popularity": 17.017,
+            "poster_path": "/gk9BPbtPoc9KvGAQPKsJ03YwP9W.jpg",
+            "release_date": "2020-01-23",
+            "title": "A Beautiful Day in the Neighborhood",
+            "video": false,
+            "vote_average": 7.4,
+            "vote_count": 149
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/yjCW0qLgmyBUuv3KwRkuwy6yfmv.jpg",
+            "genre_ids": [
+                18
+            ],
+            "id": 522369,
+            "original_language": "en",
+            "original_title": "Sorry We Missed You",
+            "overview": "From the Director of I Daniel Blake (Ken Loach) comes another hard hitting dose of reality. Ricky and his family have been fighting an uphill struggle against debt since the 2008 financial crash. An opportunity to wrestle back some independence appears with a shiny new van and the chance to run a franchise as a self-employed delivery driver. It's hard work, and his wife's job as a carer is no easier. The family unit is strong but when both are pulled in different directions everything comes to breaking point.",
+            "popularity": 13.855,
+            "poster_path": "/jNvlqNDnXH8aqBeiBxNNP0wWWO3.jpg",
+            "release_date": "2019-12-26",
+            "title": "Sorry We Missed You",
+            "video": false,
+            "vote_average": 7.6,
+            "vote_count": 110
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/6Urx7y2CQQvxIlzk5R0BpOKI2NR.jpg",
+            "genre_ids": [
+                28,
+                16,
+                14,
+                36
+            ],
+            "id": 635389,
+            "original_language": "zh",
+            "original_title": "\u59dc\u5b50\u7259",
+            "overview": "Atop the ruins of war, top commander Jiang Ziya is given the task to banish the Nine-tailed Fox Demon who threatens all mortals' very existence. When he discovers the Nine-tailed Fox's life linked to the soul of an innocent girl, he is faced with a challenging decision - follow the will of heaven or find his own path to righteousness.",
+            "popularity": 8.766,
+            "poster_path": "/hOUx60eO3duEUsJzhkiSlRkBckE.jpg",
+            "release_date": "2020-01-30",
+            "title": "Jiang Ziya: Legend of Deification",
+            "video": false,
+            "vote_average": 0,
+            "vote_count": 0
+        }
+    ],
+    "total_pages": 2,
+    "total_results": 24
+}
