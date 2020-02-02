@@ -9,8 +9,21 @@ path = 'https://api.themoviedb.org/3/movie/now_playing?api_key=' + key + '&langu
 r = requests.get(path)
 
 #pretty print data to console (for easy reading and accessing)
-data = json.dumps(json.loads(r.text), indent=4, sort_keys=True)
-print(data)
+#parsed_json to be used for accessing data
+parsed_json = (json.loads(r.text))
+
+#data is to be printed out or writtent o a file
+data = json.dumps(parsed_json, indent=4, sort_keys=True)
+# print(data)
+
+
+#sort movies by a field (popularity, vote average, votes etc.) and put into titles
+movies = parsed_json['results']
+titles = []
+for m in movies:
+    if m['popularity'] > 110:
+        titles.append(m['title'])
+print(titles)
 
 
 #*********uncomment to create/rewrite a file now_playing.json with the data of now_playing movies**********
