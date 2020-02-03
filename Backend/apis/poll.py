@@ -2,10 +2,6 @@ from flask_restplus import Namespace, Resource, fields
 
 api = Namespace('Poll', description='User related operations')
 
-names = api.model('names', {
-    'firstName': fields.String(required=True, description='User first name'),
-    'lastName' : fields.String(required=True, description='User last name')
-})
 
 user = api.model('user', {
     'user_id': fields.Integer(attribute='id',readonly=True, description='User unique ID'),

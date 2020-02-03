@@ -1,0 +1,2357 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    <title>Now Playing Movies &#8212; The Movie Database (TMDb)</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="cleartype" content="on">
+    <meta charset="utf-8">
+    <meta name="msapplication-TileColor" content="#00d573">
+    <meta name="msapplication-TileImage" content="https://www.themoviedb.org/assets/2/v4/icons/mstile-144x144-30e7905a8315a080978ad6aeb71c69222b72c2f75d26dab1224173a96fecc962.png">
+    <meta name="keywords" content="Movies, TV Shows, Reviews, API, Actors, Actresses, Photos, User Ratings, Synopsis, Trailers, Teasers, Credits, Cast">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    
+    <meta name="viewport" content="width=1120">
+    
+    <meta name="theme-color" content="#071d25">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="shortcut icon" type="image/icon" href="/favicon.ico"/>
+<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#00d474">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+    <link rel="preconnect" href="https://image.tmdb.org/" crossorigin>
+    <link rel="canonical" href="https://www.themoviedb.org/movie/now-playing">
+    <link rel="search" type="application/opensearchdescription+xml" title="TMDb Search" href="/opensearch.xml">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,600,700&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese">
+    <link rel="preload" href="https://www.themoviedb.org/assets/2/glyphicons-regular-eedc7581ecfd9bb57b1af16ad7ad4428aa147de4f08e01f49a768c801a29de84.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="https://www.themoviedb.org/assets/2/glyphicons-social-regular-3b9b636e607f21a1cfd4b7ea97c940476b79c6e6319086b20cdc67695b10a2a3.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="https://www.themoviedb.org/assets/2/application-397aa443c36b051bf4c28fda53b4ea69eb25b5b8e5e93b7d08a497f2cd75616d.css">
+    
+    
+    
+      <meta name="description" content="The Movie Database (TMDb) is a popular, user editable database for movies and TV shows.">
+    
+    
+    <link rel="alternate" hreflang="x-default" href="/movie/now-playing">
+<link rel="alternate" hreflang="ar" href="/movie/now-playing/ar">
+<link rel="alternate" hreflang="be" href="/movie/now-playing/be">
+<link rel="alternate" hreflang="bg" href="/movie/now-playing/bg">
+<link rel="alternate" hreflang="bn" href="/movie/now-playing/bn">
+<link rel="alternate" hreflang="ca" href="/movie/now-playing/ca">
+<link rel="alternate" hreflang="ch" href="/movie/now-playing/ch">
+<link rel="alternate" hreflang="cn" href="/movie/now-playing/cn">
+<link rel="alternate" hreflang="cs" href="/movie/now-playing/cs">
+<link rel="alternate" hreflang="da" href="/movie/now-playing/da">
+<link rel="alternate" hreflang="de" href="/movie/now-playing/de">
+<link rel="alternate" hreflang="el" href="/movie/now-playing/el">
+<link rel="alternate" hreflang="en" href="/movie/now-playing/en">
+<link rel="alternate" hreflang="eo" href="/movie/now-playing/eo">
+<link rel="alternate" hreflang="es" href="/movie/now-playing/es">
+<link rel="alternate" hreflang="et" href="/movie/now-playing/et">
+<link rel="alternate" hreflang="eu" href="/movie/now-playing/eu">
+<link rel="alternate" hreflang="fa" href="/movie/now-playing/fa">
+<link rel="alternate" hreflang="fi" href="/movie/now-playing/fi">
+<link rel="alternate" hreflang="fr" href="/movie/now-playing/fr">
+<link rel="alternate" hreflang="gl" href="/movie/now-playing/gl">
+<link rel="alternate" hreflang="he" href="/movie/now-playing/he">
+<link rel="alternate" hreflang="hi" href="/movie/now-playing/hi">
+<link rel="alternate" hreflang="hu" href="/movie/now-playing/hu">
+<link rel="alternate" hreflang="id" href="/movie/now-playing/id">
+<link rel="alternate" hreflang="it" href="/movie/now-playing/it">
+<link rel="alternate" hreflang="ja" href="/movie/now-playing/ja">
+<link rel="alternate" hreflang="ka" href="/movie/now-playing/ka">
+<link rel="alternate" hreflang="kk" href="/movie/now-playing/kk">
+<link rel="alternate" hreflang="kn" href="/movie/now-playing/kn">
+<link rel="alternate" hreflang="ko" href="/movie/now-playing/ko">
+<link rel="alternate" hreflang="lt" href="/movie/now-playing/lt">
+<link rel="alternate" hreflang="lv" href="/movie/now-playing/lv">
+<link rel="alternate" hreflang="ml" href="/movie/now-playing/ml">
+<link rel="alternate" hreflang="ms" href="/movie/now-playing/ms">
+<link rel="alternate" hreflang="nb" href="/movie/now-playing/nb">
+<link rel="alternate" hreflang="nl" href="/movie/now-playing/nl">
+<link rel="alternate" hreflang="no" href="/movie/now-playing/no">
+<link rel="alternate" hreflang="pl" href="/movie/now-playing/pl">
+<link rel="alternate" hreflang="pt" href="/movie/now-playing/pt">
+<link rel="alternate" hreflang="ro" href="/movie/now-playing/ro">
+<link rel="alternate" hreflang="ru" href="/movie/now-playing/ru">
+<link rel="alternate" hreflang="si" href="/movie/now-playing/si">
+<link rel="alternate" hreflang="sk" href="/movie/now-playing/sk">
+<link rel="alternate" hreflang="sl" href="/movie/now-playing/sl">
+<link rel="alternate" hreflang="sr" href="/movie/now-playing/sr">
+<link rel="alternate" hreflang="sv" href="/movie/now-playing/sv">
+<link rel="alternate" hreflang="ta" href="/movie/now-playing/ta">
+<link rel="alternate" hreflang="te" href="/movie/now-playing/te">
+<link rel="alternate" hreflang="tl" href="/movie/now-playing/tl">
+<link rel="alternate" hreflang="th" href="/movie/now-playing/th">
+<link rel="alternate" hreflang="tr" href="/movie/now-playing/tr">
+<link rel="alternate" hreflang="uk" href="/movie/now-playing/uk">
+<link rel="alternate" hreflang="vi" href="/movie/now-playing/vi">
+<link rel="alternate" hreflang="zh" href="/movie/now-playing/zh">
+<link rel="alternate" hreflang="zu" href="/movie/now-playing/zu">
+
+    
+
+    <script src="https://www.themoviedb.org/assets/2/lazysizes.min-ecd9153f15ee5598e45550c41ad0591c3d26687f4c54eedfb66c77a8568a9c62.js" async></script>
+    <script src="https://www.themoviedb.org/assets/2/application-a950042c848f42326d45e92a7bfc51223b338e74bd8d040090977d2239fad437.js"></script>
+    <script src="https://www.themoviedb.org/assets/2/pusher.min-07db6b3cb7095c3bbfd72bd98853986dd25eb0114718330c1ee6d0f20587fcbd.js"></script>
+
+    
+
+    <script>
+      
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-5QWVXV');
+    </script>
+
+    
+  </head>
+<body class="en v4">
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QWVXV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  
+
+  <div class="page_wrap movie_wrap">
+
+<header class="normal">
+  <div class="content">
+    <div class="sub_media">
+      
+        <ul class="small right">
+          <li><a href="/apps">Apps</a></li>
+          <li><a href="/discuss">Forums</a></li>
+          <li><a href="/leaderboard">Leaderboard</a></li>
+          <li><a href="/contribute">Contribute</a></li>
+          <li><a href="/documentation/api">API</a></li>
+          <li><a href="/talk">Support</a></li>
+        </ul>
+      
+
+      <div class="left">
+        <ul class="primary">
+          
+            <li class="logo">
+              <a href="/">
+                <img src="https://www.themoviedb.org/assets/2/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" alt="The Movie Database (TMDb)" width="81" height="72">
+              </a>
+            </li>
+            <li>
+              <a href="/discover">Discover</a>
+              <ul class="sub_menu discover hide">
+                <li><a href="/discover/movie">Movies</a></li>
+                <li><a href="/discover/tv">TV Shows</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/movie">Movies</a>
+              <ul class="sub_menu movie hide">
+                <li><a href="/movie">Popular</a></li>
+                <li><a href="/movie/top-rated">Top Rated</a></li>
+                <li><a href="/movie/upcoming">Upcoming</a></li>
+                <li><a href="/movie/now-playing">Now Playing</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/tv">TV Shows</a>
+              <ul class="sub_menu tv hide">
+                <li><a href="/tv">Popular</a></li>
+                <li><a href="/tv/top-rated">Top Rated</a></li>
+                <li><a href="/tv/on-the-air">On TV</a></li>
+                <li><a href="/tv/airing-today">Airing Today</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/person">People</a>
+              <ul class="sub_menu person hide">
+                <li><a href="/person">Popular People</a></li>
+              </ul>
+            </li>
+          
+        </ul>
+      </div>
+
+      
+        <div class="right">
+          <ul class="primary">
+            <li>
+              <div class="glyph_wrapper">
+                <a class="glyph new_icon no_click" href="#">
+                  <span class="glyphicons glyphicons-plus"></span>
+                  <div class="rollover">
+                    
+                      <p>Can't find a movie or TV show? Login to create it.</p>
+                    
+                  </div>
+                </a>
+              </div>
+            </li>
+            <li class="translate">
+              <div>en</div>
+            </li>
+            
+              <li><a href="/login">Login</a></li>
+              <li><a href="/account/signup">Sign Up</a></li>
+            
+          </ul>
+        </div>
+      
+    </div>
+  </div>
+  <div class="search_bar">
+    <section class="search">
+      <div class="sub_media">
+        <form id="search_form" action="/search" method="get" accept-charset="utf-8">
+          
+          <input dir="auto" id="search_v4" name="query" type="text" tabindex="0" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="">
+          <input type="submit" disabled>
+        </form>
+      </div>
+    </section>
+  </div>
+</header>
+<main id="main" class="">
+  <div class="media">
+    <h2 class="title">Now Playing Movies</h2>
+
+<div class="filter_wrapper right">
+  
+  <ul>
+    <li>
+      <span class="glyphicons glyphicons-chevron-down"></span> Filter
+      <ul class="inner_menu">
+        <li>
+          <div class="inner_menu_title">
+            <h4 class="left">Country</h4>
+            <span class="right"><a href="#" class="change_country small">Change?</a></span>
+            <div class="clear"></div>
+          </div>
+          <p class="selected_country">
+            <img width="24" height="24" src="https://www.themoviedb.org/assets/2/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png" srcset="https://www.themoviedb.org/assets/2/flags_v2/24/US-e86237650fc6e4b6f2255f3266bab2099e441962200f2da54d1aa34a3205ee86.png 1x, https://www.themoviedb.org/assets/2/flags_v2/48/US-fc54af6e5c8237200d49fd6a49061fffeb8a7217bb9000acd1c02039b65b22ba.png 2x, https://www.themoviedb.org/assets/2/flags_v2/64/US-35bf08cd02d9c5ebef38cbfbd47c1c06f4d06203f8f0e5dce2d20c6cfb0281a7.png 3x"> United States of America
+          </p>
+          <p class="select_country"><input id="choose_country" value="US"></p>
+        </li>
+        
+      </ul>
+    </li>
+  </ul>
+  
+  
+    <ul>
+      <li>
+        <span class="glyphicons glyphicons-chevron-down"></span> View
+        <ul class="inner_menu">
+          <li><a id="mixed_compact" class="view_style" href="#" alt="Mixed Compact View" title="Mixed Compact View">Mixed Compact View</a></li>
+          <li><a id="poster_card" class="view_style" href="#" alt="Poster Card View" title="Poster Card View">Poster Card View</a></li>
+          <li><a id="backdrop_card" class="view_style" href="#" alt="Backdrop Card View" title="Backdrop Card View">Backdrop Card View</a></li>
+        </ul>
+      </li>
+    </ul>
+  
+</div>
+<div class="clear"></div>
+
+<div class="results flex results_poster_card">
+    
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_530915" class="result" href="/movie/530915" title="1917" alt="1917">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/iZf0KyrE25z1sage4SYFLCCrMi9.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/iZf0KyrE25z1sage4SYFLCCrMi9.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/iZf0KyrE25z1sage4SYFLCCrMi9.jpg 2x" alt="1917">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5b280c5ec3a36864c600166c_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 2</p>
+              <p><span>Last Week:</span> 3</p>
+            </div>
+          </span>
+          <span id="popularity_5b280c5ec3a36864c600166c" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5b280c5ec3a36864c600166c" data-percent="81.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r81"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_530915" class="title result" href="/movie/530915" title="1917" alt="1917">1917</a>
+          <span>December 10, 2019</span>
+        </div>
+      </div>
+      <p class="overview">At the height of the First World War, two young British soldiers, Schofield and Blake are given a seemingly impossible mission. In a race against time, they must cross enemy territory and deliver a message that&hellip;</p>
+      <p class="view_more"><a id="movie_530915" class="result" href="/movie/530915" title="1917" alt="1917">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5b280c5ec3a36864c600166c').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_38700" class="result" href="/movie/38700" title="Bad Boys for Life" alt="Bad Boys for Life">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/y95lQLnuNKdPAzw9F9Ab8kJ80c3.jpg 2x" alt="Bad Boys for Life">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_4c052f25017a3c7e8f0002e9_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 4</p>
+              <p><span>Last Week:</span> 2</p>
+            </div>
+          </span>
+          <span id="popularity_4c052f25017a3c7e8f0002e9" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 4c052f25017a3c7e8f0002e9" data-percent="66.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r66"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_38700" class="title result" href="/movie/38700" title="Bad Boys for Life" alt="Bad Boys for Life">Bad Boys for Life</a>
+          <span>January 17, 2020</span>
+        </div>
+      </div>
+      <p class="overview">Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious&hellip;</p>
+      <p class="view_more"><a id="movie_38700" class="result" href="/movie/38700" title="Bad Boys for Life" alt="Bad Boys for Life">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.4c052f25017a3c7e8f0002e9').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_449924" class="result" href="/movie/449924" title="Ip Man 4: The Finale" alt="Ip Man 4: The Finale">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/yJdeWaVXa2se9agI6B4mQunVYkB.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/yJdeWaVXa2se9agI6B4mQunVYkB.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/yJdeWaVXa2se9agI6B4mQunVYkB.jpg 2x" alt="Ip Man 4: The Finale">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_58de53e9c3a3687c1c00b0d1_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 7</p>
+              <p><span>Last Week:</span> 7</p>
+            </div>
+          </span>
+          <span id="popularity_58de53e9c3a3687c1c00b0d1" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 58de53e9c3a3687c1c00b0d1" data-percent="59.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r59"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_449924" class="title result" href="/movie/449924" title="Ip Man 4: The Finale" alt="Ip Man 4: The Finale">Ip Man 4: The Finale</a>
+          <span>December 25, 2019</span>
+        </div>
+      </div>
+      <p class="overview">Following the death of his wife, Ip Man travels to San Francisco to ease tensions between the local kung fu masters and his star student, Bruce Lee, while searching for a better future for his son.</p>
+      <p class="view_more"><a id="movie_449924" class="result" href="/movie/449924" title="Ip Man 4: The Finale" alt="Ip Man 4: The Finale">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.58de53e9c3a3687c1c00b0d1').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_653567" class="result" href="/movie/653567" title="Miss Americana" alt="Miss Americana">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lRZ1U7LeRbW7swneo4BOqNCeKXy.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/lRZ1U7LeRbW7swneo4BOqNCeKXy.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/lRZ1U7LeRbW7swneo4BOqNCeKXy.jpg 2x" alt="Miss Americana">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5de82596c2b9df0013f05be3_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 18</p>
+              <p><span>Last Week:</span> 800</p>
+            </div>
+          </span>
+          <span id="popularity_5de82596c2b9df0013f05be3" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5de82596c2b9df0013f05be3" data-percent="85.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r85"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_653567" class="title result" href="/movie/653567" title="Miss Americana" alt="Miss Americana">Miss Americana</a>
+          <span>January 31, 2020</span>
+        </div>
+      </div>
+      <p class="overview">A raw and emotionally revealing look at one of the most iconic artists of our time during a transformational period in her life as she learns to embrace her role not only as a songwriter and performer, but as a&hellip;</p>
+      <p class="view_more"><a id="movie_653567" class="result" href="/movie/653567" title="Miss Americana" alt="Miss Americana">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5de82596c2b9df0013f05be3').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_331482" class="result" href="/movie/331482" title="Little Women" alt="Little Women">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wE5aZnk43mWV3BKh7Cv3vODTXro.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/wE5aZnk43mWV3BKh7Cv3vODTXro.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/wE5aZnk43mWV3BKh7Cv3vODTXro.jpg 2x" alt="Little Women">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_550af236c3a3681db20015c3_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 21</p>
+              <p><span>Last Week:</span> 23</p>
+            </div>
+          </span>
+          <span id="popularity_550af236c3a3681db20015c3" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 550af236c3a3681db20015c3" data-percent="80" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r80"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_331482" class="title result" href="/movie/331482" title="Little Women" alt="Little Women">Little Women</a>
+          <span>December 25, 2019</span>
+        </div>
+      </div>
+      <p class="overview">Four sisters come of age in America in the aftermath of the Civil War.</p>
+      <p class="view_more"><a id="movie_331482" class="result" href="/movie/331482" title="Little Women" alt="Little Women">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.550af236c3a3681db20015c3').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_542224" class="result" href="/movie/542224" title="Gretel &amp; Hansel" alt="Gretel &amp; Hansel">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/mBBBXseq4k4dI63k06XIrsc02j8.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/mBBBXseq4k4dI63k06XIrsc02j8.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/mBBBXseq4k4dI63k06XIrsc02j8.jpg 2x" alt="Gretel &amp; Hansel">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5b721f3ac3a368188f19fe5e_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 206,437</p>
+              <p><span>Last Week:</span> 558</p>
+            </div>
+          </span>
+          <span id="popularity_5b721f3ac3a368188f19fe5e" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5b721f3ac3a368188f19fe5e" data-percent="48.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r48"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_542224" class="title result" href="/movie/542224" title="Gretel &amp; Hansel" alt="Gretel &amp; Hansel">Gretel &amp; Hansel</a>
+          <span>January 31, 2020</span>
+        </div>
+      </div>
+      <p class="overview">A long time ago in a distant fairy tale countryside, a young girl leads her little brother into a dark wood in desperate search of food and work, only to stumble upon a nexus of terrifying evil.</p>
+      <p class="view_more"><a id="movie_542224" class="result" href="/movie/542224" title="Gretel &amp; Hansel" alt="Gretel &amp; Hansel">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5b721f3ac3a368188f19fe5e').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_442065" class="result" href="/movie/442065" title="The Last Full Measure" alt="The Last Full Measure">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/w8NECPBCViY0h7945WcmNUIROEm.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/w8NECPBCViY0h7945WcmNUIROEm.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/w8NECPBCViY0h7945WcmNUIROEm.jpg 2x" alt="The Last Full Measure">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_58a60ea49251412281000231_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 30</p>
+              <p><span>Last Week:</span> 31</p>
+            </div>
+          </span>
+          <span id="popularity_58a60ea49251412281000231" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 58a60ea49251412281000231" data-percent="81.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r81"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_442065" class="title result" href="/movie/442065" title="The Last Full Measure" alt="The Last Full Measure">The Last Full Measure</a>
+          <span>January 24, 2020</span>
+        </div>
+      </div>
+      <p class="overview">The Last Full Measure tells the true story of Vietnam War hero William H. Pitsenbarger , a U.S. Air Force Pararescuemen (also known as a PJ) medic who personally saved over sixty men. During a rescue mission on&hellip;</p>
+      <p class="view_more"><a id="movie_442065" class="result" href="/movie/442065" title="The Last Full Measure" alt="The Last Full Measure">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.58a60ea49251412281000231').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_448119" class="result" href="/movie/448119" title="Dolittle" alt="Dolittle">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/xxLdm3J8WiPLePIEa1ZfmLcMETT.jpg 2x" alt="Dolittle">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_58d0edd0c3a36838f1007a00_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 30</p>
+              <p><span>Last Week:</span> 22</p>
+            </div>
+          </span>
+          <span id="popularity_58d0edd0c3a36838f1007a00" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 58d0edd0c3a36838f1007a00" data-percent="64.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r64"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_448119" class="title result" href="/movie/448119" title="Dolittle" alt="Dolittle">Dolittle</a>
+          <span>January 17, 2020</span>
+        </div>
+      </div>
+      <p class="overview">After losing his wife seven years earlier, the eccentric Dr. John Dolittle, famed doctor and veterinarian of Queen Victoria’s England, hermits himself away behind the high walls of Dolittle Manor with only his menagerie&hellip;</p>
+      <p class="view_more"><a id="movie_448119" class="result" href="/movie/448119" title="Dolittle" alt="Dolittle">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.58d0edd0c3a36838f1007a00').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_492611" class="result" href="/movie/492611" title="The Turning" alt="The Turning">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/oBXjRyI1q2AmhqDmLsBeIB6w5mL.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/oBXjRyI1q2AmhqDmLsBeIB6w5mL.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/oBXjRyI1q2AmhqDmLsBeIB6w5mL.jpg 2x" alt="The Turning">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5a320968c3a36814b900ed88_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 42</p>
+              <p><span>Last Week:</span> 38</p>
+            </div>
+          </span>
+          <span id="popularity_5a320968c3a36814b900ed88" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5a320968c3a36814b900ed88" data-percent="59.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r59"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_492611" class="title result" href="/movie/492611" title="The Turning" alt="The Turning">The Turning</a>
+          <span>January 24, 2020</span>
+        </div>
+      </div>
+      <p class="overview">A young governess is hired by a man who has become responsible for his young nephew and niece after the deaths of their parents. A modern take on Henry James' novella "The Turn of the Screw".</p>
+      <p class="view_more"><a id="movie_492611" class="result" href="/movie/492611" title="The Turning" alt="The Turning">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5a320968c3a36814b900ed88').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_431693" class="result" href="/movie/431693" title="Spies in Disguise" alt="Spies in Disguise">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/30YacPAcxpNemhhwX0PVUl9pVA3.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/30YacPAcxpNemhhwX0PVUl9pVA3.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/30YacPAcxpNemhhwX0PVUl9pVA3.jpg 2x" alt="Spies in Disguise">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_585fc33c92514115ca01da0e_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 98</p>
+              <p><span>Last Week:</span> 59</p>
+            </div>
+          </span>
+          <span id="popularity_585fc33c92514115ca01da0e" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 585fc33c92514115ca01da0e" data-percent="72.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r72"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_431693" class="title result" href="/movie/431693" title="Spies in Disguise" alt="Spies in Disguise">Spies in Disguise</a>
+          <span>December 25, 2019</span>
+        </div>
+      </div>
+      <p class="overview">When the world's best spy is turned into a pigeon, he must rely on his nerdy tech officer to save the world.</p>
+      <p class="view_more"><a id="movie_431693" class="result" href="/movie/431693" title="Spies in Disguise" alt="Spies in Disguise">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.585fc33c92514115ca01da0e').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_473033" class="result" href="/movie/473033" title="Uncut Gems" alt="Uncut Gems">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/7gOozJufKJ9WjcIs38KEs08Iq3D.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/7gOozJufKJ9WjcIs38KEs08Iq3D.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/7gOozJufKJ9WjcIs38KEs08Iq3D.jpg 2x" alt="Uncut Gems">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_59a541cac3a36840370080fd_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 520,817</p>
+              <p><span>Last Week:</span> 401</p>
+            </div>
+          </span>
+          <span id="popularity_59a541cac3a36840370080fd" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 59a541cac3a36840370080fd" data-percent="76.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r76"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_473033" class="title result" href="/movie/473033" title="Uncut Gems" alt="Uncut Gems">Uncut Gems</a>
+          <span>December 13, 2019</span>
+        </div>
+      </div>
+      <p class="overview">A charismatic New York City jeweler always on the lookout for the next big score makes a series of high-stakes bets that could lead to the windfall of a lifetime. Howard must perform a precarious high-wire act,&hellip;</p>
+      <p class="view_more"><a id="movie_473033" class="result" href="/movie/473033" title="Uncut Gems" alt="Uncut Gems">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.59a541cac3a36840370080fd').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_522627" class="result" href="/movie/522627" title="The Gentlemen" alt="The Gentlemen">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jtrhTYB7xSrJxR1vusu99nvnZ1g.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jtrhTYB7xSrJxR1vusu99nvnZ1g.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/jtrhTYB7xSrJxR1vusu99nvnZ1g.jpg 2x" alt="The Gentlemen">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5aef10b59251417664004218_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 121</p>
+              <p><span>Last Week:</span> 141</p>
+            </div>
+          </span>
+          <span id="popularity_5aef10b59251417664004218" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5aef10b59251417664004218" data-percent="75.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r75"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_522627" class="title result" href="/movie/522627" title="The Gentlemen" alt="The Gentlemen">The Gentlemen</a>
+          <span>January 24, 2020</span>
+        </div>
+      </div>
+      <p class="overview">American expat Mickey Pearson has built a highly profitable marijuana empire in London. When word gets out that he’s looking to cash out of the business forever it triggers plots, schemes, bribery and blackmail&hellip;</p>
+      <p class="view_more"><a id="movie_522627" class="result" href="/movie/522627" title="The Gentlemen" alt="The Gentlemen">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5aef10b59251417664004218').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_443791" class="result" href="/movie/443791" title="Underwater" alt="Underwater">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jlHL2BH176JApGiLnNQLQgdjMFd.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jlHL2BH176JApGiLnNQLQgdjMFd.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/jlHL2BH176JApGiLnNQLQgdjMFd.jpg 2x" alt="Underwater">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_58b23bc9c3a368075a013ae7_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 174</p>
+              <p><span>Last Week:</span> 81</p>
+            </div>
+          </span>
+          <span id="popularity_58b23bc9c3a368075a013ae7" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 58b23bc9c3a368075a013ae7" data-percent="61.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r61"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_443791" class="title result" href="/movie/443791" title="Underwater" alt="Underwater">Underwater</a>
+          <span>January 10, 2020</span>
+        </div>
+      </div>
+      <p class="overview">After an earthquake destroys their underwater station, six researchers must navigate two miles along the dangerous, unknown depths of the ocean floor to make it to safety in a race against time.</p>
+      <p class="view_more"><a id="movie_443791" class="result" href="/movie/443791" title="Underwater" alt="Underwater">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.58b23bc9c3a368075a013ae7').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_522212" class="result" href="/movie/522212" title="Just Mercy" alt="Just Mercy">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/4YJNp1cquIkX8JxFwkKNEFQ9tgr.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/4YJNp1cquIkX8JxFwkKNEFQ9tgr.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/4YJNp1cquIkX8JxFwkKNEFQ9tgr.jpg 2x" alt="Just Mercy">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5aeb94d90e0a2663b2000036_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 145</p>
+              <p><span>Last Week:</span> 69</p>
+            </div>
+          </span>
+          <span id="popularity_5aeb94d90e0a2663b2000036" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5aeb94d90e0a2663b2000036" data-percent="81.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r81"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_522212" class="title result" href="/movie/522212" title="Just Mercy" alt="Just Mercy">Just Mercy</a>
+          <span>December 25, 2019</span>
+        </div>
+      </div>
+      <p class="overview">The powerful true story of Harvard-educated lawyer Bryan Stevenson, who goes to Alabama to defend the disenfranchised and wrongly condemned — including Walter McMillian, a man sentenced to death despite evidence&hellip;</p>
+      <p class="view_more"><a id="movie_522212" class="result" href="/movie/522212" title="Just Mercy" alt="Just Mercy">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5aeb94d90e0a2663b2000036').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_465086" class="result" href="/movie/465086" title="The Grudge" alt="The Grudge">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/vN7JHlHOT9rHNDU27tfYqhABBj5.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/vN7JHlHOT9rHNDU27tfYqhABBj5.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/vN7JHlHOT9rHNDU27tfYqhABBj5.jpg 2x" alt="The Grudge">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_595fdc1f9251410a590a575e_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 483</p>
+              <p><span>Last Week:</span> 279</p>
+            </div>
+          </span>
+          <span id="popularity_595fdc1f9251410a590a575e" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 595fdc1f9251410a590a575e" data-percent="53.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r53"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_465086" class="title result" href="/movie/465086" title="The Grudge" alt="The Grudge">The Grudge</a>
+          <span>January  3, 2020</span>
+        </div>
+      </div>
+      <p class="overview">After a young mother murders her family in her own house, a detective attempts to investigate the mysterious case, only to discover that the house is cursed by a vengeful ghost. Now targeted by the demonic spirits&hellip;</p>
+      <p class="view_more"><a id="movie_465086" class="result" href="/movie/465086" title="The Grudge" alt="The Grudge">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.595fdc1f9251410a590a575e').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_548473" class="result" href="/movie/548473" title="Color Out of Space" alt="Color Out of Space">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/7IjeaO2cYzWql0Zvx5oa1iA4zDK.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/7IjeaO2cYzWql0Zvx5oa1iA4zDK.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/7IjeaO2cYzWql0Zvx5oa1iA4zDK.jpg 2x" alt="Color Out of Space">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5b9d4a74c3a3684412003064_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 255,027</p>
+              <p><span>Last Week:</span> 324</p>
+            </div>
+          </span>
+          <span id="popularity_5b9d4a74c3a3684412003064" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5b9d4a74c3a3684412003064" data-percent="61.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r61"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_548473" class="title result" href="/movie/548473" title="Color Out of Space" alt="Color Out of Space">Color Out of Space</a>
+          <span>September 20, 2019</span>
+        </div>
+      </div>
+      <p class="overview">A story of cosmic terror about The Gardners, a family who moves to a remote farmstead in rural New England to escape the hustle of the 21st century. They are busy adapting to their new life when a meteorite crashes&hellip;</p>
+      <p class="view_more"><a id="movie_548473" class="result" href="/movie/548473" title="Color Out of Space" alt="Color Out of Space">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5b9d4a74c3a3684412003064').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_466622" class="result" href="/movie/466622" title="The Rhythm Section" alt="The Rhythm Section">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/spTr0VYyRtl36Lkk6nCnnbFXhus.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/spTr0VYyRtl36Lkk6nCnnbFXhus.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/spTr0VYyRtl36Lkk6nCnnbFXhus.jpg 2x" alt="The Rhythm Section">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_596aaddac3a3683b8c01b3d0_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 752</p>
+              <p><span>Last Week:</span> 4,095</p>
+            </div>
+          </span>
+          <span id="popularity_596aaddac3a3683b8c01b3d0" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 596aaddac3a3683b8c01b3d0" data-percent="60" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r60"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_466622" class="title result" href="/movie/466622" title="The Rhythm Section" alt="The Rhythm Section">The Rhythm Section</a>
+          <span>January 31, 2020</span>
+        </div>
+      </div>
+      <p class="overview">After the death of her family in an airplane crash on a flight that she was meant to be on, Stephanie Patrick discovers the crash was not an accident. She then seeks to uncover the truth by adapting the identity&hellip;</p>
+      <p class="view_more"><a id="movie_466622" class="result" href="/movie/466622" title="The Rhythm Section" alt="The Rhythm Section">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.596aaddac3a3683b8c01b3d0').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_466081" class="result" href="/movie/466081" title="The Informer" alt="The Informer">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pbGveUC8mk0QRkdXpERPLbMFnrg.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pbGveUC8mk0QRkdXpERPLbMFnrg.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/pbGveUC8mk0QRkdXpERPLbMFnrg.jpg 2x" alt="The Informer">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_59664c6ec3a36828a114810d_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 770</p>
+              <p><span>Last Week:</span> 940</p>
+            </div>
+          </span>
+          <span id="popularity_59664c6ec3a36828a114810d" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 59664c6ec3a36828a114810d" data-percent="64.0" data-track-color="#423d0f" data-bar-color="#d2d531">
+              <div class="percent">
+                
+                  <span class="icon icon-r64"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_466081" class="title result" href="/movie/466081" title="The Informer" alt="The Informer">The Informer</a>
+          <span>January 10, 2020</span>
+        </div>
+      </div>
+      <p class="overview">In New York, former convict Pete Koslow, related to the Polish mafia, must deal with both Klimek the General, his ruthless boss, and the twisted ambitions of two federal agents, as he tries to survive and protect&hellip;</p>
+      <p class="view_more"><a id="movie_466081" class="result" href="/movie/466081" title="The Informer" alt="The Informer">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.59664c6ec3a36828a114810d').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_568160" class="result" href="/movie/568160" title="Weathering with You" alt="Weathering with You">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pVlNK3knUXatpxvSTioll7DgyQh.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/pVlNK3knUXatpxvSTioll7DgyQh.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/pVlNK3knUXatpxvSTioll7DgyQh.jpg 2x" alt="Weathering with You">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5c121738c3a368242be72871_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 1,106</p>
+              <p><span>Last Week:</span> 555</p>
+            </div>
+          </span>
+          <span id="popularity_5c121738c3a368242be72871" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5c121738c3a368242be72871" data-percent="78.0" data-track-color="#204529" data-bar-color="#21d07a">
+              <div class="percent">
+                
+                  <span class="icon icon-r78"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_568160" class="title result" href="/movie/568160" title="Weathering with You" alt="Weathering with You">Weathering with You</a>
+          <span>January 17, 2020</span>
+        </div>
+      </div>
+      <p class="overview">High school student Hodaka leaves his home on an isolated island and moves to Tokyo, but he immediately becomes broke. He lives his days in isolation, but finally finds a job as a writer for a shady occult magazine.&hellip;</p>
+      <p class="view_more"><a id="movie_568160" class="result" href="/movie/568160" title="Weathering with You" alt="Weathering with You">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5c121738c3a368242be72871').easyPieChart({
+          lineCap: 'round',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+  <div class="item poster card">
+    <div class="image_content">
+      <a id="movie_627463" class="result" href="/movie/627463" title="The Assistant" alt="The Assistant">
+          
+    
+      <img class="poster lazyload fade" data-sizes="auto" data-src="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jHugGG64vYTrgFgIGwxi6o9rAES.jpg" data-srcset="https://image.tmdb.org/t/p/w185_and_h278_bestv2/jHugGG64vYTrgFgIGwxi6o9rAES.jpg 1x, https://image.tmdb.org/t/p/w370_and_h556_bestv2/jHugGG64vYTrgFgIGwxi6o9rAES.jpg 2x" alt="The Assistant">
+    
+  
+
+        <div class="meta">
+          <span id="popularity_5d6a8fa20929f6001345bdf7_value" class="hide popularity_rank_value">
+            <div class="tooltip_popup popularity">
+              <h3>Popularity Rank</h3>
+              <p><span>Today:</span> 1,432</p>
+              <p><span>Last Week:</span> 8,608</p>
+            </div>
+          </span>
+          <span id="popularity_5d6a8fa20929f6001345bdf7" class="glyphicons glyphicons-cardio x1 popularity_rank"></span>
+          <span class="right">
+            
+          </span>
+        </div>
+      </a>
+    </div>
+    <div class="info">
+      <div class="wrapper">
+        <div class="consensus tight">
+          <div class="outer_ring">
+            <div class="user_score_chart 5d6a8fa20929f6001345bdf7" data-percent="0" data-track-color="#666666" data-bar-color="#d4d4d4">
+              <div class="percent">
+                
+                  <span class="icon icon-rNR"></span>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex">
+          <a id="movie_627463" class="title result" href="/movie/627463" title="The Assistant" alt="The Assistant">The Assistant</a>
+          <span>January 31, 2020</span>
+        </div>
+      </div>
+      <p class="overview">A look at the day in the life of the assistant to a powerful corporate executive.</p>
+      <p class="view_more"><a id="movie_627463" class="result" href="/movie/627463" title="The Assistant" alt="The Assistant">More Info</a></p>
+    </div>
+    <script>
+      $(function() {
+        $('.user_score_chart.5d6a8fa20929f6001345bdf7').easyPieChart({
+          lineCap: 'butt',
+          lineWidth: 3,
+          scaleColor: false,
+          size: 32,
+          animate: {
+            enabled: false
+          }
+        });
+      });
+    </script>
+  </div>
+  
+
+  
+    <div class="pagination_wrapper">
+      
+        <div class="pagination" custom_path_info="/movie/now-playing"><span class="previous_page disabled">← Previous</span> <em class="current">1</em> <a rel="next" href="/movie/now-playing?page=2">2</a> <a href="/movie/now-playing?page=3">3</a> <a href="/movie/now-playing?page=4">4</a> <a href="/movie/now-playing?page=5">5</a> <a class="next_page" rel="next" href="/movie/now-playing?page=2">Next →</a></div>
+      
+    </div>
+  
+
+  <script>
+    $(document).ready(function() {
+      
+
+      attachMovieListPopularityTooltip();
+    });
+  </script>
+
+</div>
+
+<script>
+  $(document).ready(function() {
+
+    
+      var country_datasource = new kendo.data.DataSource({
+        data:   [{"code":"AF","english_name":"Afghanistan","folded_name":"Afghanistan","native_name":"Afghanistan"},{"code":"AL","english_name":"Albania","folded_name":"Albania","native_name":"Albania"},{"code":"DZ","english_name":"Algeria","folded_name":"Algeria","native_name":"Algeria"},{"code":"AS","english_name":"American Samoa","folded_name":"American Samoa","native_name":"American Samoa"},{"code":"AD","english_name":"Andorra","folded_name":"Andorra","native_name":"Andorra"},{"code":"AO","english_name":"Angola","folded_name":"Angola","native_name":"Angola"},{"code":"AI","english_name":"Anguilla","folded_name":"Anguilla","native_name":"Anguilla"},{"code":"AQ","english_name":"Antarctica","folded_name":"Antarctica","native_name":"Antarctica"},{"code":"AG","english_name":"Antigua and Barbuda","folded_name":"Antigua \u0026 Barbuda","native_name":"Antigua \u0026 Barbuda"},{"code":"AR","english_name":"Argentina","folded_name":"Argentina","native_name":"Argentina"},{"code":"AM","english_name":"Armenia","folded_name":"Armenia","native_name":"Armenia"},{"code":"AW","english_name":"Aruba","folded_name":"Aruba","native_name":"Aruba"},{"code":"AU","english_name":"Australia","folded_name":"Australia","native_name":"Australia"},{"code":"AT","english_name":"Austria","folded_name":"Austria","native_name":"Austria"},{"code":"AZ","english_name":"Azerbaijan","folded_name":"Azerbaijan","native_name":"Azerbaijan"},{"code":"BS","english_name":"Bahamas","folded_name":"Bahamas","native_name":"Bahamas"},{"code":"BH","english_name":"Bahrain","folded_name":"Bahrain","native_name":"Bahrain"},{"code":"BD","english_name":"Bangladesh","folded_name":"Bangladesh","native_name":"Bangladesh"},{"code":"BB","english_name":"Barbados","folded_name":"Barbados","native_name":"Barbados"},{"code":"BY","english_name":"Belarus","folded_name":"Belarus","native_name":"Belarus"},{"code":"BE","english_name":"Belgium","folded_name":"Belgium","native_name":"Belgium"},{"code":"BZ","english_name":"Belize","folded_name":"Belize","native_name":"Belize"},{"code":"BJ","english_name":"Benin","folded_name":"Benin","native_name":"Benin"},{"code":"BM","english_name":"Bermuda","folded_name":"Bermuda","native_name":"Bermuda"},{"code":"BT","english_name":"Bhutan","folded_name":"Bhutan","native_name":"Bhutan"},{"code":"BO","english_name":"Bolivia","folded_name":"Bolivia","native_name":"Bolivia"},{"code":"BA","english_name":"Bosnia and Herzegovina","folded_name":"Bosnia \u0026 Herzegovina","native_name":"Bosnia \u0026 Herzegovina"},{"code":"BW","english_name":"Botswana","folded_name":"Botswana","native_name":"Botswana"},{"code":"BV","english_name":"Bouvet Island","folded_name":"Bouvet Island","native_name":"Bouvet Island"},{"code":"BR","english_name":"Brazil","folded_name":"Brazil","native_name":"Brazil"},{"code":"IO","english_name":"British Indian Ocean Territory","folded_name":"British Indian Ocean Territory","native_name":"British Indian Ocean Territory"},{"code":"VG","english_name":"British Virgin Islands","folded_name":"British Virgin Islands","native_name":"British Virgin Islands"},{"code":"BN","english_name":"Brunei Darussalam","folded_name":"Brunei","native_name":"Brunei"},{"code":"BG","english_name":"Bulgaria","folded_name":"Bulgaria","native_name":"Bulgaria"},{"code":"BF","english_name":"Burkina Faso","folded_name":"Burkina Faso","native_name":"Burkina Faso"},{"code":"BI","english_name":"Burundi","folded_name":"Burundi","native_name":"Burundi"},{"code":"KH","english_name":"Cambodia","folded_name":"Cambodia","native_name":"Cambodia"},{"code":"CM","english_name":"Cameroon","folded_name":"Cameroon","native_name":"Cameroon"},{"code":"CA","english_name":"Canada","folded_name":"Canada","native_name":"Canada"},{"code":"CV","english_name":"Cape Verde","folded_name":"Cape Verde","native_name":"Cape Verde"},{"code":"KY","english_name":"Cayman Islands","folded_name":"Cayman Islands","native_name":"Cayman Islands"},{"code":"CF","english_name":"Central African Republic","folded_name":"Central African Republic","native_name":"Central African Republic"},{"code":"TD","english_name":"Chad","folded_name":"Chad","native_name":"Chad"},{"code":"CL","english_name":"Chile","folded_name":"Chile","native_name":"Chile"},{"code":"CN","english_name":"China","folded_name":"China","native_name":"China"},{"code":"CX","english_name":"Christmas Island","folded_name":"Christmas Island","native_name":"Christmas Island"},{"code":"CC","english_name":"Cocos  Islands","folded_name":"Cocos (Keeling) Islands","native_name":"Cocos (Keeling) Islands"},{"code":"CO","english_name":"Colombia","folded_name":"Colombia","native_name":"Colombia"},{"code":"KM","english_name":"Comoros","folded_name":"Comoros","native_name":"Comoros"},{"code":"CD","english_name":"Congo","folded_name":"Congo - Kinshasa","native_name":"Congo - Kinshasa"},{"code":"CG","english_name":"Congo","folded_name":"Congo - Brazzaville","native_name":"Congo - Brazzaville"},{"code":"CK","english_name":"Cook Islands","folded_name":"Cook Islands","native_name":"Cook Islands"},{"code":"CR","english_name":"Costa Rica","folded_name":"Costa Rica","native_name":"Costa Rica"},{"code":"CI","english_name":"Cote D'Ivoire","folded_name":"Cote d?Ivoire","native_name":"Côte d’Ivoire"},{"code":"HR","english_name":"Croatia","folded_name":"Croatia","native_name":"Croatia"},{"code":"CU","english_name":"Cuba","folded_name":"Cuba","native_name":"Cuba"},{"code":"CY","english_name":"Cyprus","folded_name":"Cyprus","native_name":"Cyprus"},{"code":"CZ","english_name":"Czech Republic","folded_name":"Czech Republic","native_name":"Czech Republic"},{"code":"XC","english_name":"Czechoslovakia","folded_name":"Czechoslovakia","native_name":"Czechoslovakia"},{"code":"DK","english_name":"Denmark","folded_name":"Denmark","native_name":"Denmark"},{"code":"DJ","english_name":"Djibouti","folded_name":"Djibouti","native_name":"Djibouti"},{"code":"DM","english_name":"Dominica","folded_name":"Dominica","native_name":"Dominica"},{"code":"DO","english_name":"Dominican Republic","folded_name":"Dominican Republic","native_name":"Dominican Republic"},{"code":"XG","english_name":"East Germany","folded_name":"East Germany","native_name":"East Germany"},{"code":"EC","english_name":"Ecuador","folded_name":"Ecuador","native_name":"Ecuador"},{"code":"EG","english_name":"Egypt","folded_name":"Egypt","native_name":"Egypt"},{"code":"SV","english_name":"El Salvador","folded_name":"El Salvador","native_name":"El Salvador"},{"code":"GQ","english_name":"Equatorial Guinea","folded_name":"Equatorial Guinea","native_name":"Equatorial Guinea"},{"code":"ER","english_name":"Eritrea","folded_name":"Eritrea","native_name":"Eritrea"},{"code":"EE","english_name":"Estonia","folded_name":"Estonia","native_name":"Estonia"},{"code":"ET","english_name":"Ethiopia","folded_name":"Ethiopia","native_name":"Ethiopia"},{"code":"FO","english_name":"Faeroe Islands","folded_name":"Faroe Islands","native_name":"Faroe Islands"},{"code":"FK","english_name":"Falkland Islands","folded_name":"Falkland Islands","native_name":"Falkland Islands"},{"code":"FJ","english_name":"Fiji","folded_name":"Fiji","native_name":"Fiji"},{"code":"FI","english_name":"Finland","folded_name":"Finland","native_name":"Finland"},{"code":"FR","english_name":"France","folded_name":"France","native_name":"France"},{"code":"GF","english_name":"French Guiana","folded_name":"French Guiana","native_name":"French Guiana"},{"code":"PF","english_name":"French Polynesia","folded_name":"French Polynesia","native_name":"French Polynesia"},{"code":"TF","english_name":"French Southern Territories","folded_name":"French Southern Territories","native_name":"French Southern Territories"},{"code":"GA","english_name":"Gabon","folded_name":"Gabon","native_name":"Gabon"},{"code":"GM","english_name":"Gambia","folded_name":"Gambia","native_name":"Gambia"},{"code":"GE","english_name":"Georgia","folded_name":"Georgia","native_name":"Georgia"},{"code":"DE","english_name":"Germany","folded_name":"Germany","native_name":"Germany"},{"code":"GH","english_name":"Ghana","folded_name":"Ghana","native_name":"Ghana"},{"code":"GI","english_name":"Gibraltar","folded_name":"Gibraltar","native_name":"Gibraltar"},{"code":"GR","english_name":"Greece","folded_name":"Greece","native_name":"Greece"},{"code":"GL","english_name":"Greenland","folded_name":"Greenland","native_name":"Greenland"},{"code":"GD","english_name":"Grenada","folded_name":"Grenada","native_name":"Grenada"},{"code":"GP","english_name":"Guadaloupe","folded_name":"Guadeloupe","native_name":"Guadeloupe"},{"code":"GU","english_name":"Guam","folded_name":"Guam","native_name":"Guam"},{"code":"GT","english_name":"Guatemala","folded_name":"Guatemala","native_name":"Guatemala"},{"code":"GN","english_name":"Guinea","folded_name":"Guinea","native_name":"Guinea"},{"code":"GW","english_name":"Guinea-Bissau","folded_name":"Guinea-Bissau","native_name":"Guinea-Bissau"},{"code":"GY","english_name":"Guyana","folded_name":"Guyana","native_name":"Guyana"},{"code":"HT","english_name":"Haiti","folded_name":"Haiti","native_name":"Haiti"},{"code":"HM","english_name":"Heard and McDonald Islands","folded_name":"Heard \u0026 McDonald Islands","native_name":"Heard \u0026 McDonald Islands"},{"code":"VA","english_name":"Holy See","folded_name":"Vatican City","native_name":"Vatican City"},{"code":"HN","english_name":"Honduras","folded_name":"Honduras","native_name":"Honduras"},{"code":"HK","english_name":"Hong Kong","folded_name":"Hong Kong SAR China","native_name":"Hong Kong SAR China"},{"code":"HU","english_name":"Hungary","folded_name":"Hungary","native_name":"Hungary"},{"code":"IS","english_name":"Iceland","folded_name":"Iceland","native_name":"Iceland"},{"code":"IN","english_name":"India","folded_name":"India","native_name":"India"},{"code":"ID","english_name":"Indonesia","folded_name":"Indonesia","native_name":"Indonesia"},{"code":"IR","english_name":"Iran","folded_name":"Iran","native_name":"Iran"},{"code":"IQ","english_name":"Iraq","folded_name":"Iraq","native_name":"Iraq"},{"code":"IE","english_name":"Ireland","folded_name":"Ireland","native_name":"Ireland"},{"code":"IL","english_name":"Israel","folded_name":"Israel","native_name":"Israel"},{"code":"IT","english_name":"Italy","folded_name":"Italy","native_name":"Italy"},{"code":"JM","english_name":"Jamaica","folded_name":"Jamaica","native_name":"Jamaica"},{"code":"JP","english_name":"Japan","folded_name":"Japan","native_name":"Japan"},{"code":"JO","english_name":"Jordan","folded_name":"Jordan","native_name":"Jordan"},{"code":"KZ","english_name":"Kazakhstan","folded_name":"Kazakhstan","native_name":"Kazakhstan"},{"code":"KE","english_name":"Kenya","folded_name":"Kenya","native_name":"Kenya"},{"code":"KI","english_name":"Kiribati","folded_name":"Kiribati","native_name":"Kiribati"},{"code":"XK","english_name":"Kosovo","folded_name":"Kosovo","native_name":"Kosovo"},{"code":"KW","english_name":"Kuwait","folded_name":"Kuwait","native_name":"Kuwait"},{"code":"KG","english_name":"Kyrgyz Republic","folded_name":"Kyrgyzstan","native_name":"Kyrgyzstan"},{"code":"LA","english_name":"Lao People's Democratic Republic","folded_name":"Laos","native_name":"Laos"},{"code":"LV","english_name":"Latvia","folded_name":"Latvia","native_name":"Latvia"},{"code":"LB","english_name":"Lebanon","folded_name":"Lebanon","native_name":"Lebanon"},{"code":"LS","english_name":"Lesotho","folded_name":"Lesotho","native_name":"Lesotho"},{"code":"LR","english_name":"Liberia","folded_name":"Liberia","native_name":"Liberia"},{"code":"LY","english_name":"Libyan Arab Jamahiriya","folded_name":"Libya","native_name":"Libya"},{"code":"LI","english_name":"Liechtenstein","folded_name":"Liechtenstein","native_name":"Liechtenstein"},{"code":"LT","english_name":"Lithuania","folded_name":"Lithuania","native_name":"Lithuania"},{"code":"LU","english_name":"Luxembourg","folded_name":"Luxembourg","native_name":"Luxembourg"},{"code":"MO","english_name":"Macao","folded_name":"Macau SAR China","native_name":"Macau SAR China"},{"code":"MK","english_name":"Macedonia","folded_name":"Macedonia","native_name":"Macedonia"},{"code":"MG","english_name":"Madagascar","folded_name":"Madagascar","native_name":"Madagascar"},{"code":"MW","english_name":"Malawi","folded_name":"Malawi","native_name":"Malawi"},{"code":"MY","english_name":"Malaysia","folded_name":"Malaysia","native_name":"Malaysia"},{"code":"MV","english_name":"Maldives","folded_name":"Maldives","native_name":"Maldives"},{"code":"ML","english_name":"Mali","folded_name":"Mali","native_name":"Mali"},{"code":"MT","english_name":"Malta","folded_name":"Malta","native_name":"Malta"},{"code":"MH","english_name":"Marshall Islands","folded_name":"Marshall Islands","native_name":"Marshall Islands"},{"code":"MQ","english_name":"Martinique","folded_name":"Martinique","native_name":"Martinique"},{"code":"MR","english_name":"Mauritania","folded_name":"Mauritania","native_name":"Mauritania"},{"code":"MU","english_name":"Mauritius","folded_name":"Mauritius","native_name":"Mauritius"},{"code":"YT","english_name":"Mayotte","folded_name":"Mayotte","native_name":"Mayotte"},{"code":"MX","english_name":"Mexico","folded_name":"Mexico","native_name":"Mexico"},{"code":"FM","english_name":"Micronesia","folded_name":"Micronesia","native_name":"Micronesia"},{"code":"MD","english_name":"Moldova","folded_name":"Moldova","native_name":"Moldova"},{"code":"MC","english_name":"Monaco","folded_name":"Monaco","native_name":"Monaco"},{"code":"MN","english_name":"Mongolia","folded_name":"Mongolia","native_name":"Mongolia"},{"code":"ME","english_name":"Montenegro","folded_name":"Montenegro","native_name":"Montenegro"},{"code":"MS","english_name":"Montserrat","folded_name":"Montserrat","native_name":"Montserrat"},{"code":"MA","english_name":"Morocco","folded_name":"Morocco","native_name":"Morocco"},{"code":"MZ","english_name":"Mozambique","folded_name":"Mozambique","native_name":"Mozambique"},{"code":"MM","english_name":"Myanmar","folded_name":"Myanmar (Burma)","native_name":"Myanmar (Burma)"},{"code":"NA","english_name":"Namibia","folded_name":"Namibia","native_name":"Namibia"},{"code":"NR","english_name":"Nauru","folded_name":"Nauru","native_name":"Nauru"},{"code":"NP","english_name":"Nepal","folded_name":"Nepal","native_name":"Nepal"},{"code":"NL","english_name":"Netherlands","folded_name":"Netherlands","native_name":"Netherlands"},{"code":"AN","english_name":"Netherlands Antilles","folded_name":"Netherlands Antilles","native_name":"Netherlands Antilles"},{"code":"NC","english_name":"New Caledonia","folded_name":"New Caledonia","native_name":"New Caledonia"},{"code":"NZ","english_name":"New Zealand","folded_name":"New Zealand","native_name":"New Zealand"},{"code":"NI","english_name":"Nicaragua","folded_name":"Nicaragua","native_name":"Nicaragua"},{"code":"NE","english_name":"Niger","folded_name":"Niger","native_name":"Niger"},{"code":"NG","english_name":"Nigeria","folded_name":"Nigeria","native_name":"Nigeria"},{"code":"NU","english_name":"Niue","folded_name":"Niue","native_name":"Niue"},{"code":"NF","english_name":"Norfolk Island","folded_name":"Norfolk Island","native_name":"Norfolk Island"},{"code":"KP","english_name":"North Korea","folded_name":"North Korea","native_name":"North Korea"},{"code":"MP","english_name":"Northern Mariana Islands","folded_name":"Northern Mariana Islands","native_name":"Northern Mariana Islands"},{"code":"NO","english_name":"Norway","folded_name":"Norway","native_name":"Norway"},{"code":"OM","english_name":"Oman","folded_name":"Oman","native_name":"Oman"},{"code":"PK","english_name":"Pakistan","folded_name":"Pakistan","native_name":"Pakistan"},{"code":"PW","english_name":"Palau","folded_name":"Palau","native_name":"Palau"},{"code":"PS","english_name":"Palestinian Territory","folded_name":"Palestinian Territories","native_name":"Palestinian Territories"},{"code":"PA","english_name":"Panama","folded_name":"Panama","native_name":"Panama"},{"code":"PG","english_name":"Papua New Guinea","folded_name":"Papua New Guinea","native_name":"Papua New Guinea"},{"code":"PY","english_name":"Paraguay","folded_name":"Paraguay","native_name":"Paraguay"},{"code":"PE","english_name":"Peru","folded_name":"Peru","native_name":"Peru"},{"code":"PH","english_name":"Philippines","folded_name":"Philippines","native_name":"Philippines"},{"code":"PN","english_name":"Pitcairn Island","folded_name":"Pitcairn Islands","native_name":"Pitcairn Islands"},{"code":"PL","english_name":"Poland","folded_name":"Poland","native_name":"Poland"},{"code":"PT","english_name":"Portugal","folded_name":"Portugal","native_name":"Portugal"},{"code":"PR","english_name":"Puerto Rico","folded_name":"Puerto Rico","native_name":"Puerto Rico"},{"code":"QA","english_name":"Qatar","folded_name":"Qatar","native_name":"Qatar"},{"code":"RE","english_name":"Reunion","folded_name":"Reunion","native_name":"Réunion"},{"code":"RO","english_name":"Romania","folded_name":"Romania","native_name":"Romania"},{"code":"RU","english_name":"Russia","folded_name":"Russia","native_name":"Russia"},{"code":"RW","english_name":"Rwanda","folded_name":"Rwanda","native_name":"Rwanda"},{"code":"WS","english_name":"Samoa","folded_name":"Samoa","native_name":"Samoa"},{"code":"SM","english_name":"San Marino","folded_name":"San Marino","native_name":"San Marino"},{"code":"ST","english_name":"Sao Tome and Principe","folded_name":"Sao Tome \u0026 Principe","native_name":"São Tomé \u0026 Príncipe"},{"code":"SA","english_name":"Saudi Arabia","folded_name":"Saudi Arabia","native_name":"Saudi Arabia"},{"code":"SN","english_name":"Senegal","folded_name":"Senegal","native_name":"Senegal"},{"code":"RS","english_name":"Serbia","folded_name":"Serbia","native_name":"Serbia"},{"code":"CS","english_name":"Serbia and Montenegro","folded_name":"Serbia and Montenegro","native_name":"Serbia and Montenegro"},{"code":"SC","english_name":"Seychelles","folded_name":"Seychelles","native_name":"Seychelles"},{"code":"SL","english_name":"Sierra Leone","folded_name":"Sierra Leone","native_name":"Sierra Leone"},{"code":"SG","english_name":"Singapore","folded_name":"Singapore","native_name":"Singapore"},{"code":"SK","english_name":"Slovakia","folded_name":"Slovakia","native_name":"Slovakia"},{"code":"SI","english_name":"Slovenia","folded_name":"Slovenia","native_name":"Slovenia"},{"code":"SB","english_name":"Solomon Islands","folded_name":"Solomon Islands","native_name":"Solomon Islands"},{"code":"SO","english_name":"Somalia","folded_name":"Somalia","native_name":"Somalia"},{"code":"ZA","english_name":"South Africa","folded_name":"South Africa","native_name":"South Africa"},{"code":"GS","english_name":"South Georgia and the South Sandwich Islands","folded_name":"South Georgia \u0026 South Sandwich Islands","native_name":"South Georgia \u0026 South Sandwich Islands"},{"code":"KR","english_name":"South Korea","folded_name":"South Korea","native_name":"South Korea"},{"code":"SS","english_name":"South Sudan","folded_name":"South Sudan","native_name":"South Sudan"},{"code":"SU","english_name":"Soviet Union","folded_name":"Soviet Union","native_name":"Soviet Union"},{"code":"ES","english_name":"Spain","folded_name":"Spain","native_name":"Spain"},{"code":"LK","english_name":"Sri Lanka","folded_name":"Sri Lanka","native_name":"Sri Lanka"},{"code":"SH","english_name":"St. Helena","folded_name":"St. Helena","native_name":"St. Helena"},{"code":"KN","english_name":"St. Kitts and Nevis","folded_name":"St. Kitts \u0026 Nevis","native_name":"St. Kitts \u0026 Nevis"},{"code":"LC","english_name":"St. Lucia","folded_name":"St. Lucia","native_name":"St. Lucia"},{"code":"PM","english_name":"St. Pierre and Miquelon","folded_name":"St. Pierre \u0026 Miquelon","native_name":"St. Pierre \u0026 Miquelon"},{"code":"VC","english_name":"St. Vincent and the Grenadines","folded_name":"St. Vincent \u0026 Grenadines","native_name":"St. Vincent \u0026 Grenadines"},{"code":"SD","english_name":"Sudan","folded_name":"Sudan","native_name":"Sudan"},{"code":"SR","english_name":"Suriname","folded_name":"Suriname","native_name":"Suriname"},{"code":"SJ","english_name":"Svalbard \u0026 Jan Mayen Islands","folded_name":"Svalbard \u0026 Jan Mayen","native_name":"Svalbard \u0026 Jan Mayen"},{"code":"SZ","english_name":"Swaziland","folded_name":"Swaziland","native_name":"Swaziland"},{"code":"SE","english_name":"Sweden","folded_name":"Sweden","native_name":"Sweden"},{"code":"CH","english_name":"Switzerland","folded_name":"Switzerland","native_name":"Switzerland"},{"code":"SY","english_name":"Syrian Arab Republic","folded_name":"Syria","native_name":"Syria"},{"code":"TW","english_name":"Taiwan","folded_name":"Taiwan","native_name":"Taiwan"},{"code":"TJ","english_name":"Tajikistan","folded_name":"Tajikistan","native_name":"Tajikistan"},{"code":"TZ","english_name":"Tanzania","folded_name":"Tanzania","native_name":"Tanzania"},{"code":"TH","english_name":"Thailand","folded_name":"Thailand","native_name":"Thailand"},{"code":"TL","english_name":"Timor-Leste","folded_name":"Timor-Leste","native_name":"Timor-Leste"},{"code":"TG","english_name":"Togo","folded_name":"Togo","native_name":"Togo"},{"code":"TK","english_name":"Tokelau","folded_name":"Tokelau","native_name":"Tokelau"},{"code":"TO","english_name":"Tonga","folded_name":"Tonga","native_name":"Tonga"},{"code":"TT","english_name":"Trinidad and Tobago","folded_name":"Trinidad \u0026 Tobago","native_name":"Trinidad \u0026 Tobago"},{"code":"TN","english_name":"Tunisia","folded_name":"Tunisia","native_name":"Tunisia"},{"code":"TR","english_name":"Turkey","folded_name":"Turkey","native_name":"Turkey"},{"code":"TM","english_name":"Turkmenistan","folded_name":"Turkmenistan","native_name":"Turkmenistan"},{"code":"TC","english_name":"Turks and Caicos Islands","folded_name":"Turks \u0026 Caicos Islands","native_name":"Turks \u0026 Caicos Islands"},{"code":"TV","english_name":"Tuvalu","folded_name":"Tuvalu","native_name":"Tuvalu"},{"code":"VI","english_name":"US Virgin Islands","folded_name":"U.S. Virgin Islands","native_name":"U.S. Virgin Islands"},{"code":"UG","english_name":"Uganda","folded_name":"Uganda","native_name":"Uganda"},{"code":"UA","english_name":"Ukraine","folded_name":"Ukraine","native_name":"Ukraine"},{"code":"AE","english_name":"United Arab Emirates","folded_name":"United Arab Emirates","native_name":"United Arab Emirates"},{"code":"GB","english_name":"United Kingdom","folded_name":"United Kingdom","native_name":"United Kingdom"},{"code":"UM","english_name":"United States Minor Outlying Islands","folded_name":"U.S. Outlying Islands","native_name":"U.S. Outlying Islands"},{"code":"US","english_name":"United States of America","folded_name":"United States","native_name":"United States"},{"code":"UY","english_name":"Uruguay","folded_name":"Uruguay","native_name":"Uruguay"},{"code":"UZ","english_name":"Uzbekistan","folded_name":"Uzbekistan","native_name":"Uzbekistan"},{"code":"VU","english_name":"Vanuatu","folded_name":"Vanuatu","native_name":"Vanuatu"},{"code":"VE","english_name":"Venezuela","folded_name":"Venezuela","native_name":"Venezuela"},{"code":"VN","english_name":"Vietnam","folded_name":"Vietnam","native_name":"Vietnam"},{"code":"WF","english_name":"Wallis and Futuna Islands","folded_name":"Wallis \u0026 Futuna","native_name":"Wallis \u0026 Futuna"},{"code":"EH","english_name":"Western Sahara","folded_name":"Western Sahara","native_name":"Western Sahara"},{"code":"YE","english_name":"Yemen","folded_name":"Yemen","native_name":"Yemen"},{"code":"YU","english_name":"Yugoslavia","folded_name":"Yugoslavia","native_name":"Yugoslavia"},{"code":"ZM","english_name":"Zambia","folded_name":"Zambia","native_name":"Zambia"},{"code":"ZW","english_name":"Zimbabwe","folded_name":"Zimbabwe","native_name":"Zimbabwe"}]
+,
+        sort: { field: "english_name", dir: "asc" }
+      });
+
+      $("#choose_country").kendoDropDownList({
+        dataTextField: "english_name",
+        dataValueField: "code",
+        dataSource: country_datasource,
+        open: function(e) {
+          $('#choose_country').closest('ul.inner_menu').addClass('hover');
+        },
+        close: function(e) {
+          $('#choose_country').closest('ul.inner_menu').removeClass('hover');
+        },
+        change: function(e) {
+          var value = this.value();
+
+          $.ajax({
+            url: '/set_country',
+            type: 'POST',
+            data: {
+              locale: value
+            }
+          }).fail(function() {
+            showError('There was a problem.');
+          }).success(function() {
+            showSuccess('Your changes have been successfully saved.', 'Success');
+            location.reload();
+          });
+        }
+      });
+
+      $("#choose_country").data("kendoDropDownList").wrapper.hide();
+
+      $('div.filter_wrapper ul li a.change_country').on('click', function(e) {
+        e.preventDefault();
+
+        $('p.selected_country').toggleClass('hide');
+        $("#choose_country").data("kendoDropDownList").wrapper.show();
+      });
+
+      $('div.filter_wrapper ul li span.filter').on('click', function(e) {
+        e.preventDefault();
+
+        if ($(this).hasClass('glyphicons-unchecked')) {
+          $(this).removeClass('glyphicons-unchecked');
+          $(this).addClass('glyphicons-check');
+        } else {
+          $(this).removeClass('glyphicons-check');
+          $(this).addClass('glyphicons-unchecked');
+        }
+      });
+    
+
+    $('a.view_style').on('click', function(e) {
+      e.preventDefault();
+
+      $.ajax({
+        url: '/remote/movie/now-playing',
+        data: {
+          list_style: this.id
+        },
+        dataType: 'html'
+      }).done(function(response) {
+        $('div.media div.results').remove();
+        $('div.media').append(response);
+      });
+    });
+  });
+</script>
+  </div>
+</main>
+
+    </div> <!-- page_wrap opened in html_head -->
+
+    <style>
+      footer {
+        
+          background-image: url('https://www.themoviedb.org/assets/2/v4/footers_v2/Minions-7626a4bff6ef7b6a7afa6a8641278e23b094d6a882da4129d9a8928d05b3b911.jpg'), radial-gradient(at 30% top, rgba(7, 64, 52, 1) 0%, rgba(8, 28, 36, 1) 70%);
+        
+      }
+    </style>
+
+    <footer class="single_column movie  lazyload">
+      <nav>
+        <div class="join">
+          <img src="https://www.themoviedb.org/assets/2/v4/logos/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" alt="The Movie Database (TMDb)" width="130" height="116">
+
+          
+            <a class="rounded" href="/account/signup">Join the Community</a>
+          
+        </div>
+
+        <div>
+          <h3>The Basics</h3>
+          <ul>
+            <li><a href="/about">About TMDb</a></li>
+            <li><a href="/about/staying-in-touch">Contact Us</a></li>
+            <li><a href="/talk">Support Forums</a></li>
+            <li><a href="/documentation/api">API</a></li>
+            <li><a href="https://blog.themoviedb.org/" target="_blank" rel="noopener">Blog</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Get Involved</h3>
+          <ul>
+            <li><a href="/bible"><span class="glyphicons glyphicons-asterisk"></span> Contribution Bible</a></li>
+            <li><a href="/apps">3rd Party Applications</a></li>
+            <li><a href="/movie/new">Add New Movie</a></li>
+            <li><a href="/tv/new">Add New TV Show</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Community</h3>
+          <ul>
+            <li><a href="/documentation/community/guidelines">Guidelines</a></li>
+            <li><a href="/leaderboard">Leaderboard</a></li>
+            <li><a href="/discuss">Forums</a></li>
+            <li><a href="https://twitter.com/themoviedb" target="_blank" rel="noopener">Twitter</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Legal</h3>
+          <ul>
+            <li><a href="/documentation/website/terms-of-use">Terms of Use</a></li>
+            <li><a href="/privacy-policy">Privacy Policy</a></li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+    
+
+    <script>
+      function appendStyle(styles) {
+        var css = document.createElement('style');
+        css.type = 'text/css';
+
+        if (css.styleSheet) {
+          css.styleSheet.cssText = styles;
+        } else {
+          css.appendChild(document.createTextNode(styles));
+        }
+
+        document.getElementsByTagName("head")[0].appendChild(css);
+      }
+    </script>
+
+    
+      <div id="settings_tooltip" class="hide">
+        <div class="settings_content">
+          <div class="group no_pad">
+            <p><a href="/login">Login</a></p>
+          </div>
+          <div class="group">
+            <p><a href="/account/signup">Sign Up</a></p>
+          </div>
+        </div>
+      </div>
+    
+
+    <div id="keyboard_shortcuts_popup" class="hide">
+      <div class="content keyboard_shortcuts">
+        <div class="column">
+          <h3>Global</h3>
+          <div><span>s</span> focus the search bar</div>
+          <div><span>p</span> open profile menu</div>
+          <div><span>esc</span> close an open window</div>
+          <div><span>?</span> open keyboard shortcut window</div>
+
+          <h3>On media pages</h3>
+          <div><span>b</span> go back (or to parent when applicable)</div>
+          <div><span>e</span> go to edit page</div>
+
+          <h3>On TV season pages</h3>
+          <div><span>&#8594;</span> (right arrow) go to next season</div>
+          <div><span>&#8592;</span> (left arrow) go to previous season</div>
+
+          <h3>On TV episode pages</h3>
+          <div><span>&#8594;</span> (right arrow) go to next episode</div>
+          <div><span>&#8592;</span> (left arrow) go to previous episode</div>
+
+          <h3>On all image pages</h3>
+          <div><span>a</span> open add image window</div>
+        </div>
+
+        <div class="column">
+          <h3>On all edit pages</h3>
+          <div><span>t</span> open translation selector</div>
+          <div><span>ctrl</span>+ <span>s</span> submit form</div>
+
+          <h3>On discussion pages</h3>
+          <div><span>n</span> create new discussion</div>
+          <div><span>w</span> toggle watching status</div>
+          <div><span>p</span> toggle public/private</div>
+          <div><span>c</span> toggle close/open</div>
+          <div><span>a</span> open activity</div>
+          <div><span>r</span> reply to discussion</div>
+          <div><span>l</span> go to last reply</div>
+          <div><span>ctrl</span>+ <span>enter</span> submit your message</div>
+          <div><span>&#8594;</span> (right arrow) next page</div>
+          <div><span>&#8592;</span> (left arrow) previous page</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hide">
+      <div id="video_popup"></div>
+    </div>
+
+    
+
+    <script src="https://www.themoviedb.org/assets/2/progressive.min-b7700026dd68db00344c999ba373d235771d76f758310dc3a48a20ff94beab11.js"></script>
+    <script src="https://www.themoviedb.org/assets/2/footer-045190bee931e60ab4cf194dccc581f255f94e156ef6392562d74017b682b93a.js"></script>
+    
+      <script src="https://www.themoviedb.org/assets/2/timeago/locales/jquery.timeago.en-US-f9d144e55407ca11f35de7a0d44b0d54ec1ffc6c4039dffd5a11c0a12e6a9482.js"></script>
+    
+    
+      <script src="https://www.themoviedb.org/assets/2/kendo-2018.3.1017/cultures/kendo.culture.en-US.min-16651d326ca6eba9d5643ae6b5f537ae83ee3d434b48f4f74200e7fd446a255d.js"></script>
+    
+
+    <script type="text/javascript" charset="utf-8">
+      kendo.culture("en-US");
+
+      $('#cookie_notice a.accept').on('click', function(e) {
+        e.preventDefault();
+        var set_cookie = Cookies.set('cookie_policy', 'true', { domain: '.www.themoviedb.org', expires: 15551999 });
+        $('#cookie_notice').fadeOut('fast');
+      });
+
+      function convertEmoji() {
+        $(".convert_emoji").each(function() {
+          var original = $(this).html();
+          var converted = emojione.shortnameToImage(original);
+          $(this).html(converted);
+        });
+      }
+
+      emojione.imageType = 'svg';
+      emojione.imagePathSVG = '/emojis/static_cache/v2/';
+
+      $(document).ready(function() {
+        jQuery.timeago.settings.allowFuture = true;
+        $("time.timeago").timeago();
+
+        convertEmoji();
+
+        $("section.inner_content ul.shortcut_bar li").each(function(index) {
+          $(this).css({ 'z-index': index + 2 });
+
+          if ( menu = $(this).attr('data-sub-menu') ) {
+            $('#' + menu).css({ 'z-index': index + 2 });
+          }
+        });
+
+        function getMenuItem(object) {
+          var currentItem = $(object);
+          var menu = $('#' + currentItem.attr('data-sub-menu'));
+          var position = currentItem.offset();
+
+          return { currentItem: currentItem, menu: menu, position: position }
+        }
+
+        
+          var entered = false;
+
+          $('section.inner_content ul.shortcut_bar li.no_hover').on({
+            mouseenter: function(e) {
+              $('section.inner_content ul.shortcut_bar li.no_hover').removeClass('open');
+              $('section.inner_content div.inner_sub_menu').removeClass('visible');
+
+              var menu_item = getMenuItem(this);
+              var nav_item = $(this);
+              var spacer = 0;
+              if ( $('#media_v4').hasClass('person_v4 header_medium') ) {
+                spacer = 553;
+              }
+
+              nav_item.toggleClass('open');
+              menu_item.menu.find('li.primary').height(menu_item.currentItem.parent().height())
+              menu_item.menu.toggleClass('visible').css({ top: (menu_item.position.top - spacer), left: (menu_item.position.left - 10), 'min-width': (menu_item.currentItem.width() + 10) });
+
+              menu_item.menu.on('mouseleave', function() {
+                nav_item.removeClass('open');
+                menu_item.menu.removeClass('visible');
+              });
+            }
+          });
+        
+
+        var hover_tooltip = $('li.user a.no_click.tooltip_hover').kendoTooltip({
+          position: 'bottom',
+          show: function(e) {
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("tmdb_theme_white");
+            this.element.removeClass('keyboard');
+          }
+        }).data("kendoTooltip");
+
+        $('li.user a.no_click').kendoTooltip({
+          autoHide: false,
+          showOn: 'click',
+          width: 180,
+          position: 'bottom',
+          content: function() {
+            return $("#settings_tooltip").html();
+          },
+          show: function(e) {
+            hover_tooltip.hide();
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("tmdb_theme_white no_pad");
+
+            if (this.element.hasClass('keyboard')) {
+              this.popup.element.find('p a')[0].focus();
+            }
+          }
+        });
+
+        $('li.translate').kendoTooltip({
+          autoHide: false,
+          content: {
+            url: "/translation_popup?language=en-US&media_type=Movie&media_id=&referral=%2Fmovie%2Fnow-playing",
+            cache: true,
+            headers: {
+              'Accept-Language': 'en-US',
+              'Content-Type': 'text/html;charset=utf-8'
+            }
+          },
+          showOn: 'click',
+          width: 300,
+          position: 'bottom',
+          show: function(e) {
+            $("div.k-tooltip-button").addClass('hide');
+            this.popup.element.addClass("min_100px_height");
+            this.popup.element.addClass("tmdb_theme_light");
+          }
+        });
+
+        $('li.new').kendoTooltip({
+          autoHide: false,
+          showOn: 'click',
+          width: 240,
+          position: 'bottom',
+          content: function() {
+            return $("div.new_buttons");
+          },
+          show: function(e) {
+            this.popup.element.addClass("tmdb_theme_light");
+            $("div.k-tooltip-button").addClass('hide');
+            $("div.new_buttons").toggleClass('hide');
+          },
+          hide: function(e) {
+            $("div.new_buttons").toggleClass('hide');
+          }
+        });
+
+        
+
+        $("body *").on('click', 'a.no_click', function(e) {
+          e.preventDefault();
+        });
+
+        $("ul > li").hover(function() {
+          $(this).find("ul.sub_nav.hide").toggle();
+        });
+
+        
+          $("header ul.primary li").hover(function(e) {
+            if ($('header').hasClass('normal')) {
+              $(this).find("ul.hide").toggle();
+            }
+          });
+        
+
+        
+          function init() {
+            window.addEventListener('scroll', function(e) {
+              var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+                shrinkOn = 60,
+                header = document.querySelector("header");
+              if (distanceY > shrinkOn) {
+                $('header').removeClass("normal").removeClass("regular").addClass("smaller");
+              } else {
+                if ($('header').hasClass("smaller")) {
+                  $('header').addClass("normal").addClass("regular").removeClass("smaller");
+                }
+              }
+            });
+          }
+          window.onload = init();
+        
+
+        showSuccess = function(message, title) {
+          if (title === undefined) {
+            title = 'Success';
+          }
+
+          showNotification({
+            title: title,
+            message: message
+          }, "success");
+        };
+
+        showError = function(message, title) {
+          if (title === undefined) {
+            title = 'Error';
+          }
+
+          showNotification({
+            title: title,
+            message: message
+          }, "error");
+        };
+
+        var showNotification = (function() {
+          var notification = $("span#notification").kendoNotification({
+            stacking: "down",
+            
+              position: {
+                top: 20,
+                left: null,
+                bottom: null,
+                right: 20
+              },
+            
+            autoHideAfter: 5000,
+            show: function(e) {
+              e.element.parent().css({
+                zIndex: 99999
+              });
+            },
+            templates: [{
+              type: "error",
+              template: $("#errorTemplate").html()
+            },{
+              type: "success",
+              template: $("#successTemplate").html()
+            }]
+          }).data("kendoNotification");
+
+          return function(msg, type) {
+            notification.show(msg, type);
+          };
+        })();
+
+        var keyboard_shortcut_popup = $('#keyboard_shortcuts_popup div.content').kendoWindow({
+          title: 'Keyboard Shortcuts',
+          actions: [ "Close" ],
+          modal: true,
+          draggable: false,
+          resizable: false,
+          visible: false,
+          pinned: true,
+          animation: {
+            open: {
+              effects: "fade:in"
+            },
+            close: {
+              effects: "fade:out"
+            }
+          },
+          open: function() {
+            $('body').addClass('blur');
+          },
+          close: function() {
+            $('body').removeClass('blur');
+          }
+        }).data("kendoWindow").center();
+
+        $('#keyboard_shortcuts').on('click', function() {
+          keyboard_shortcut_popup.open();
+        });
+
+        var seach_redirect_template = "/search{0}?query={1}&language=en-US";
+        var selected_item = null;
+
+        function processSelectedItem(e) {
+          if (selected_item) {
+            return
+          } else {
+            if (e) {
+              var dataItem = this.dataItem(e.item.index());
+              switch(dataItem.media_type) {
+                case 'movie':
+                  selected_item = kendo.format(seach_redirect_template, '/movie', encodeURIComponent(dataItem.title));
+                  break;
+                case 'tv':
+                  selected_item = kendo.format(seach_redirect_template, '/tv', encodeURIComponent(dataItem.name));
+                  break;
+                case 'person':
+                  selected_item = kendo.format(seach_redirect_template, '/person', encodeURIComponent(dataItem.name));
+                  break;
+                default:
+                  selected_item = kendo.format(seach_redirect_template, '', encodeURIComponent(dataItem));
+              }
+            } else {
+              selected_item = kendo.format(seach_redirect_template, '', encodeURIComponent($("#search_v4").data("kendoAutoComplete").value()));
+            }
+          }
+
+          window.location = selected_item;
+        }
+
+        $("#search_v4").kendoAutoComplete({
+          highlightFirst: false,
+          animation: false,
+          minLength: 1,
+          dataTextField: "title",
+          template: kendo.template($("#slim_multi_search_template").html()),
+          noDataTemplate: $("#search_no_data_template").html(),
+          ignoreCase: false,
+          dataSource: {
+            type: "json",
+            serverFiltering: true,
+            transport: {
+              read: '/search/trending?language=en-US',
+              parameterMap: function() {
+                return { query: $("#search_v4").data("kendoAutoComplete").value() };
+              }
+            },
+            schema: {
+              data: "results"
+            }
+          },
+          popup: {
+            appendTo: $("header")
+          },
+          filtering: function(e) {
+            var filter = e.filter;
+            if (filter.value == '') {
+              if( ($('#search_v4-list #trending_search_header_template').length) == 0 ) {
+                $('#search_v4_listbox').empty();
+                $('#search_v4-list').prepend($("#search_v4_headerTemplate").html());
+              }
+            } else {
+              $("#trending_search_header_template").remove();
+            }
+          },
+          select: processSelectedItem
+        }).data("kendoAutoComplete");
+
+        $('header #search_form').submit(function() {
+          return false;
+        });
+
+        $('#search_v4').keydown(function(event) {
+          if(event.keyCode == 13) {
+            processSelectedItem();
+          }
+        });
+
+        var autocompleteInput = $('section.search .k-autocomplete input');
+        autocompleteInput.on('focus', function (e) {
+          var value = autocompleteInput.val();
+          if (value == null || value == '') {
+            $("#search_v4").data("kendoAutoComplete").search('');
+          }
+        });
+
+        $('header span.k-i-close[title="clear"]').on('click', function(e) {
+          $('#search_v4').data("kendoAutoComplete").focus();
+        });
+
+        
+
+        public_media_type_map = { 'movie': 'Movie', 'tv': 'TV Show', 'person': 'Person' };
+
+        
+
+        $(document).on('keydown', null, 'b', function() {
+          if ( $('a.keyboard_s.parent').length ) {
+            $('a.keyboard_s.parent')[0].click();
+          }
+        });
+
+        $(document).on('keyup', null, 's', function() {
+          if ( $('#search_v4').length ) {
+            $("#search_v4").data("kendoAutoComplete").focus('').value('');
+          }
+        });
+
+        $(document).on('keyup', null, 'shift+/', function() {
+          keyboard_shortcut_popup.open();
+        });
+
+        $(document).on('keydown', null, 'left', function() {
+          if ( $('span.previous a.keyboard_s').length ) {
+            $('span.previous a.keyboard_s')[0].click();
+          }
+        });
+
+        $(document).on('keydown', null, 'right', function() {
+          if ( $('span.next a.keyboard_s').length ) {
+            $('span.next a.keyboard_s')[0].click();
+          }
+        });
+
+      });
+    </script>
+
+    <script id="person_template_with_known_for" type="text/x-kendo-tmpl">
+      <div class="item profile list_item known_for">
+        <div class="image_content profile">
+          # if (data.profile_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path}" alt="${data.name}" width="45" height="45" data-srcset="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path} 1x, https://image.tmdb.org/t/p/w132_and_h132_face${data.profile_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h45 profile"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          # if (data.known_for) { #
+            <p class="sub">${data.known_for_department} &bull; ${data.known_for}</p>
+          # } else { #
+            <p class="sub">No known credits.</p>
+          # } #
+        </div>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script id="person_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item profile list_item known_for">
+        <div class="image_content profile">
+          # if (data.profile_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path}" alt="${data.name}" width="45" height="45" data-srcset="https://image.tmdb.org/t/p/w66_and_h66_face${data.profile_path} 1x, https://image.tmdb.org/t/p/w132_and_h132_bestv2${data.profile_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h45 profile"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          # if (data.known_for) { #
+            <p class="sub">
+              # for (var i = 0; i < data.known_for.length; i++) { #
+              <span class="comma">#= data.known_for[i].title ? data.known_for[i].title : data.known_for[i].name #</span>
+              # } #
+            </p>
+          # } else { #
+            <p class="sub">No known credits.</p>
+          # } #
+        </div>
+
+        <p><span class="media_type person">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="movie_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.title}</p>
+          <p class="sub">
+            # if (data.original_title !== data.title) { #
+              <span class="comma"><span class="original_title">#= data.original_title #</span></span>
+            # } #
+            # if (data.release_date) { #
+              <span class="comma"><span class="release_date">#= data.release_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type movie">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="tv_show_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.name}</p>
+          <p class="sub">
+            # if (data.original_name !== data.name) { #
+              <span class="comma"><span class="original_title">#= data.original_name #</span></span>
+            # } #
+            # if (data.first_air_date) { #
+              <span class="comma"><span class="release_date">#= data.first_air_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type tv">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="slim_movie_result_template" type="text/x-kendo-tmpl">
+      <div class="ac_item poster list_item">
+        <div class="image_content poster">
+          # if (data.poster_path) { #
+            <img class="lazyload fade" data-src="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path}" alt="${data.title}" width="45" height="67" data-srcset="https://image.tmdb.org/t/p/w45_and_h67_bestv2${data.poster_path} 1x, https://image.tmdb.org/t/p/w90_and_h134_bestv2${data.poster_path} 2x">
+          # } else { #
+            <div class="no_image_holder w45_and_h67"></div>
+          # } #
+        </div>
+
+        <div class="content">
+          <p class="name">${data.title}</p>
+          <p class="sub">
+            # if (data.original_title !== data.title) { #
+              <span class="comma"><span class="original_title">#= data.original_title #</span></span>
+            # } #
+            # if (data.release_date) { #
+              <span class="comma"><span class="release_date">#= data.release_date #</span></span>
+            # } #
+          </p>
+        </div>
+
+        <p><span class="media_type movie">#= public_media_type_map[data.media_type] #</span></p>
+      </div>
+    </script>
+
+    <script id="multi_search_template" type="text/x-kendo-tmpl">
+      <div class="ac_results">
+        # if (data.media_type == 'movie') { #
+          #= kendo.render(kendo.template($("\\#movie_result_template").html()), [data]) #
+        # } else if (data.media_type == 'tv') { #
+          #= kendo.render(kendo.template($("\\#tv_show_result_template").html()), [data]) #
+        # } else if (data.media_type == 'person') { #
+          #= kendo.render(kendo.template($("\\#person_result_template").html()), [data]) #
+        # } #
+      </div>
+    </script>
+
+    <script id="search_v4_headerTemplate" type="text/x-kendo-template">
+      <div id="trending_search_header_template" class="slim_search_results_header">
+        <div class="wrapper">
+          <h2>Trending Searches</h2>
+        </div>
+      </div>
+    </script>
+
+    <script id="search_no_data_template" type="text/x-kendo-template">
+      <div class="slim_search_results_header no_data">
+        <div class="wrapper">
+          <h2>No Results</h2>
+        </div>
+      </div>
+    </script>
+
+    <script id="slim_multi_search_template" type="text/x-kendo-tmpl">
+      # if (data.media_type == 'movie') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-film"></div>
+            <p>#= data.title # <span>in Movies</span></p>
+          </div>
+        </div>
+      # } else if (data.media_type == 'tv') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-tv"></div>
+            <p>#= data.name # <span>in TV Shows</span></p>
+          </div>
+        </div>
+      # } else if (data.media_type == 'person') { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-user"></div>
+            <p>#= data.name # <span>in People</span></p>
+          </div>
+        </div>
+      # } else { #
+        <div class="slim_search_results slim">
+          <div class="wrapper">
+            <div class="glyphicons glyphicons-search"></div>
+            <p>#= data #</p>
+          </div>
+        </div>
+      # } #
+    </script>
+
+    <script id="delete-confirmation" type="text/x-kendo-template">
+      <section class="window_content">
+        <p class="delete-message">Are you sure?</p>
+
+        <button class="delete-cancel k-button">No</button>
+        <button class="delete-confirm k-button">Yes</button>
+      </section>
+    </script>
+
+    <div id="dialog_window"></div>
+
+    <span id="notification" class="hide"></span>
+    <script id="errorTemplate" type="text/x-kendo-template">
+      <div class="notification error">
+        <span class="glyphicons glyphicons-exclamation-sign x1"></span>
+        <span class="left">
+          <h2>#= title #</h2>
+          # if (message instanceof Array) { #
+            <ul>
+              # for (var i = 0; i < message.length; i++) { #
+                <li>#= message[i] #</li>
+              # } #
+            </ul>
+          # } else { #
+            <p>#= message #</p>
+          # } #
+        </span>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script id="successTemplate" type="text/x-kendo-template">
+      <div class="notification success">
+        <span class="glyphicons glyphicons-ok x1"></span>
+        <span class="left">
+          <h2>#= title #</h2>
+          <p>#= message #</p>
+        </span>
+        <div class="clear"></div>
+      </div>
+    </script>
+
+    <script type="application/ld+json">
+      {
+        "@context": "http://schema.org",
+        "@type": "WebSite",
+        "name": "The Movie Database",
+        "alternateName": "TMDb",
+        "url": "https://www.themoviedb.org"
+      }
+    </script>
+
+    <script type="application/ld+json">
+      {
+         "@context": "http://schema.org",
+         "@type": "WebSite",
+         "url": "https://www.themoviedb.org/",
+         "potentialAction": {
+           "@type": "SearchAction",
+           "target": "https://www.themoviedb.org/search?query={search_term_string}",
+           "query-input": "required name=search_term_string"
+         }
+      }
+    </script>
+
+  </body>
+</html>
