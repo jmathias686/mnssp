@@ -17,7 +17,7 @@ CREATE TABLE if not exists poll( --only has movie objects
 CREATE TABLE if not exists events(--actual event
     events_id serial PRIMARY KEY,
     dates   character(10),
-    selected_movie int references poll(movieID),
+    selected_movie int references poll(movie_id),
     movie_goers int[],
     dining_goers int []
 );
