@@ -4,21 +4,22 @@ from flask_restplus import Namespace, Resource, fields, reqparse
 api = Namespace('Users', description='User related operations')
 
 
-names = api.model('names', {
-    'firstName': fields.String(required=True, description='User first name'),
-    'lastName' : fields.String(required=True, description='User last name')
+names = api.model('Names', {
+    'first_name': fields.String(required=True, description='User first name'),
+    'last_name' : fields.String(required=True, description='User last name')
 })
 
-user = api.model('user', {
-    'id': fields.Integer(readonly=True, description='User unique ID'),
-    'firstName': fields.String(required=True, description='User first name'),
-    'lastName' : fields.String(required=True, description='User last name'),
+user = api.model('User', {
+    'user_id': fields.Integer(attribute='id',readonly=True, description='User unique ID'),
+    'first_name': fields.String(required=True, description='User first name'),
+    'last_name' : fields.String(required=True, description='User last name'),
     'email' : fields.String(required=True, description='User Email address'),
     'attending': fields.Boolean(description='If User attending next event'),
     'vote' : fields.Integer(default=-1, description='What movie User has voted on')
 })
 
 email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
+
 
 class UserDAO(object):
     def __init__(self):
@@ -75,11 +76,11 @@ class UserDAO(object):
 
 
 USERS = UserDAO()
-USERS.create({'firstName': 'External', 'lastName': 'Stub', 'email': 'extstub@gmaill.com'})
-USERS.create({'firstName': 'Mule', 'lastName': 'Soft', 'email': 'msoft@gmaill.com', 'attending': True})
-USERS.create({'firstName': 'Any', 'lastName': 'Point', 'email': 'anyp@gmaill.com'})
-USERS.create({'firstName': 'Post', 'lastName': 'Man', 'email': 'pmpat@gmaill.com'})
-USERS.create({'firstName': 'Smart', 'lastName': 'Stub', 'email': 'bigbrain@gmaill.com'})
+USERS.create({'first_name': 'External', 'last_name': 'Stub', 'email': 'extstub@gmaill.com'})
+USERS.create({'first_name': 'Mule', 'last_name': 'Soft', 'email': 'msoft@gmaill.com', 'attending': True})
+USERS.create({'first_name': 'Any', 'last_name': 'Point', 'email': 'anyp@gmaill.com'})
+USERS.create({'first_name': 'Post', 'last_name': 'Man', 'email': 'pmpat@gmaill.com'})
+USERS.create({'first_name': 'Smart', 'last_name': 'Stub', 'email': 'bigbrain@gmaill.com'})
 
 
 
