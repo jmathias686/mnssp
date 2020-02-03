@@ -4,10 +4,8 @@ insert into users (first_name, last_name, email, vote_id) values ('Mufeed', 'Oom
 insert into users (first_name, last_name, email, vote_id) values ('Joseph', 'Mathias','jomathias@deloitte.com.au', -1);
 
 --add to events table
-insert into events (dates, selected_movie, movie_goers, dining_goers) values ( '06-02-2020', 'bad boys for life', ARRAY[1,2,3], ARRAY[1,2,3]);
-
 --add to poll as movie object
-insert into poll ()
+--insert into poll ()
 
 --reset poll
-truncate poll
+--truncate poll
