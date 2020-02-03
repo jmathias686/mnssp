@@ -1,6 +1,6 @@
 # Don't track content of these folders
 Backend/apis/__pycache/
-
+Backend/core/database/
 
 # Compiled source #
 ###################
