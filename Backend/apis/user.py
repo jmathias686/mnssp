@@ -1,6 +1,6 @@
 from flask_restplus import Namespace, Resource, fields, reqparse
 #NOTE: reqparse will be removed eventually, so a different parser might need to be implemented later
-
+#no authentication right now, just string confirmation
 api = Namespace('Users', description='User related operations')
 
 
