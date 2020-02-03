@@ -1,5 +1,5 @@
 from flask_restplus import Namespace, Resource, fields
-
+import core as dbfn
 api = Namespace('Events', description='Events related operations')
 
 
@@ -31,15 +31,16 @@ class EventList(Resource):
     @api.marshal_list_with(events)
     def get(self):
         '''List all events'''
-        return EVENTS.Event
+        return dbfn.queryDB('select * from events'), 200
 
     @api.doc('create_event')
     @api.expect(events)
     @api.marshal_with(events, code=201)
     def post(self):
         '''Create a new Event'''
-        return EVENTS.create(api.payload), 201
-
+        insert_string = dates + ',' + selected_movie
+        dbfn.commitDB('insert into events (dates, selected_movie) values (' + insert_string + ')')
+        return {"message": "events created"}
 
 @api.route('/current')
 class Event(Resource):
@@ -47,9 +48,29 @@ class Event(Resource):
     @api.marshal_with(events)
     def get(self):
         '''Get current event'''
-        id = EVENTS.counter
-        return EVENTS.get(id)
+        #assumption all events are made in order
+        return dbfn.queryDB('select * from events order by events_id DESC limit 1')
 
+@api.route('/current/attendee/<int:id>')
+class EventAttendee(Resource):
+    @api.doc('update_goer')
+    def patch(self,id):
+        curr = dbfn.queryDB('select movie_goers from events order by events_id DESC limit 1')
+        #manipulate the movie_goers list and append new id
+        #quick call into 'update events set movie_goers = ' + new_list + ' where events_id = max(events_id)'
+        dbfn.commitDB('')
+        return
+
+@api.route('/current/dining/<int:id>')
+class EventDining(Resource):
+    @api.doc('update_diner')
+    def patch(self,id):
+        curr = dbfn.queryDB('select dining_goers from events order by events_id DESC limit 1')
+        # manipulate the dining_goers list and append new id
+        # quick call into 'update events set movie_goers = ' + new_list + ' where events_id = max(events_id)'
+        
+        dbfn.commitDB('')
+        return
 
 @api.route('/<int:id>')
 @api.param('id', 'The Event identifier')
@@ -59,5 +80,5 @@ class EventSpecific(Resource):
     @api.marshal_with(events)
     def get(self, id):
         '''Get specific event given identifier - for past events'''
-        return EVENTS.get(id)
+        return dbfn.queryDB('select * from events where events_id = '+str(id))
         # api.abort(404)
