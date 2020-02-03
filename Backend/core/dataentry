@@ -1,7 +1,7 @@
 --add to user table
-insert into users (first_name, last_name, email, vote_id) values ('Edwin', 'Choi','edchoi@deloitte.com.au', -1);
-insert into users (first_name, last_name, email, vote_id) values ('Mufeed', 'Oomatia','moomatia@deloitte.com.au', -1);
-insert into users (first_name, last_name, email, vote_id) values ('Joseph', 'Mathias','jomathias@deloitte.com.au', -1);
+insert into users (first_name, last_name, email, attending, vote_id) values ('Edwin', 'Choi','edchoi@deloitte.com.au', false, -1);
+insert into users (first_name, last_name, email, attending, vote_id) values ('Mufeed', 'Oomatia','moomatia@deloitte.com.au', false, -1);
+insert into users (first_name, last_name, email, attending, vote_id) values ('Joseph', 'Mathias','jomathias@deloitte.com.au', false, -1);
 
 --add to events table
 --add to poll as movie object

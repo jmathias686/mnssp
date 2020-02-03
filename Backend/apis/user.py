@@ -1,6 +1,6 @@
 from flask_restplus import Namespace, Resource, fields, reqparse
 import core as dbfn
-from flask import jsonify
+import json
 #NOTE: reqparse will be removed eventually, so a different parser might need to be implemented later
 #no authentication right now, just string confirmation
 api = Namespace('Users', description='User related operations')
@@ -17,76 +17,10 @@ user = api.model('User', {
     'last_name' : fields.String(required=True, description='User last name'),
     'email' : fields.String(required=True, description='User Email address'),
     'attending': fields.Boolean(description='If User attending next event'),
-    'vote' : fields.Integer(default=-1, description='What movie User has voted on')
+    'vote_id' : fields.Integer(default=-1, description='What movie User has voted on')
 })
 
 email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
-
-
-class UserDAO(object):
-    def __init__(self):
-        self.counter = 0
-        self.User = []
-
-    def get(self, id):
-        for usr in self.User:
-            if usr['id'] == id:
-                return usr
-        api.abort(404, "User {} doesn't exist".format(id))
-
-    def getAttending(self):
-        attendance = []
-        for usr in self.User:
-            if usr['attending'] == True or usr['attending'] == 'true':
-                attendance.append(usr)
-        return attendance    
-
-    def create(self, data):
-        usr = data
-        usr['id'] = self.counter = self.counter + 1
-        if 'attending' not in usr:
-            usr['attending'] = False
-        self.User.append(usr)
-        return usr
-
-    # def updateAttending(self, id, attendance):
-    #     usr = self.get(id)
-    #     usr['attending'] = attendance
-    #     return usr
-
-    def update(self, id, data):
-        usr = self.get(id)
-        usr.update(data)
-        return usr
-
-    def delete(self, id):
-        usr = self.get(id)
-        self.User.remove(usr)
-
-    def getEmails(self):
-        email = []
-        for usr in self.User:
-            if usr['email'] is not None:
-                email.append(usr)
-        return email
-
-    def getEmailInd(self,id):
-        for usr in self.User:
-            if usr['id'] == id:
-                return usr['user']['email']
-        api.abort(404, "User {} doesn't exist".format(id))
-
-
-USERS = UserDAO()
-USERS.create({'first_name': 'External', 'last_name': 'Stub', 'email': 'extstub@gmaill.com'})
-USERS.create({'first_name': 'Mule', 'last_name': 'Soft', 'email': 'msoft@gmaill.com', 'attending': True})
-USERS.create({'first_name': 'Any', 'last_name': 'Point', 'email': 'anyp@gmaill.com'})
-USERS.create({'first_name': 'Post', 'last_name': 'Man', 'email': 'pmpat@gmaill.com'})
-USERS.create({'first_name': 'Smart', 'last_name': 'Stub', 'email': 'bigbrain@gmaill.com'})
-
-
-
-
 
 @api.route('/')
 class UserList(Resource):
@@ -103,7 +37,11 @@ class UserList(Resource):
     @api.marshal_with(user, code=201)
     def post(self):
         '''Create a new User'''
-        return USERS.create(api.payload), 201
+        #need pass down values
+        print(((api.payload['first_name'])))
+        insert_str = '\'' + api.payload['first_name'] + '\', \'' + api.payload['last_name'] + '\', \'' + api.payload['email'] +'\', false, 0'
+        dbfn.commitDB('insert into users (first_name, last_name, email, attending, vote_id) values ('+ insert_str +')')
+        return { 'message' : 'user create success' }, 201
 
 
 @api.route('/<int:id>')
@@ -115,21 +53,24 @@ class User(Resource):
     @api.marshal_with(user)
     def get(self, id):
         '''Fetch a user given its identifier'''
-        return USERS.get(id)
+        return dbfn.queryDB('select * from users where user_id = ' + id), 200
 
     @api.doc('delete_user')
     @api.response(204, 'User deleted')
     def delete(self, id):
         '''Delete a user given its identifier'''
-        USERS.delete(id)
-        return {"User {}".format(id) : "deleted"}, 204
+        dbfn.commitDB('delete from users where user_id = '+id)
+        return {"message": "user " + id + " deleted"}, 204
         # api.abort(404)
-
     @api.doc('update_user')
     @api.marshal_with(user)
-    def put(self,id):
+    def put(self,id): #maybe should be patch?
+        #add check if exist else return no user
+        #need help on what to be updating...? shouldn't need an update
         '''Update user data'''
-        return USERS.update(id, api.payload)
+        #query = 
+        #dbfn.commitDB('update users set '+ query +'where user_id = '+id) 
+        return {'message':'user ' +id+' updated'}
     
 
 
@@ -140,14 +81,17 @@ class Attending(Resource):
     @api.marshal_list_with(user)
     def get(self):
         '''List all users attending'''
-        return USERS.getAttending()
+        tuples = dbfn.queryDB('select * from users where attending = true')
+        print(tuples)
+        return tuples
 
-    # @api.doc('Update attendance of specific user')
-    # @api.marshal_with(user)
-    # @api.expect(user)
-    # def post(self):
-    #     # usr = USERS.get(id)
-    #     return USERS.get(id)
+@api.route('/attending/<int:id>/<string:attend>')
+class userAttending(Resource):
+    @api.doc('Update attendance of specific user')
+    def post(self, id, attend):
+        # usr = USERS.get(id)
+        dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
+        return {"message": "attendance updated to "+ attend}, 204
 
     
 
@@ -158,7 +102,7 @@ class Emails(Resource):
     @api.marshal_with(email, envelope="Email_list")
     def get(self):
         '''List all user emails'''
-        return USERS.User
+        return dbfn.queryDB('select email from users')
 
 
 @api.route('/emails/<int:id>')
@@ -167,5 +111,5 @@ class singleEmail(Resource):
     @api.marshal_with(email)
     def get(self,id):
         '''Show specific user email'''
-        return USERS.get(id)
+        return dbfn.queryDB('select email from users where user_id = '+str(id))
 
