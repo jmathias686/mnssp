@@ -1,4 +1,6 @@
 from flask_restplus import Namespace, Resource, fields, reqparse
+import core as dbfn
+from flask import jsonify
 #NOTE: reqparse will be removed eventually, so a different parser might need to be implemented later
 #no authentication right now, just string confirmation
 api = Namespace('Users', description='User related operations')
@@ -10,7 +12,7 @@ names = api.model('Names', {
 })
 
 user = api.model('User', {
-    'user_id': fields.Integer(attribute='id',readonly=True, description='User unique ID'),
+    'user_id': fields.Integer(readonly=True, description='User unique ID'),
     'first_name': fields.String(required=True, description='User first name'),
     'last_name' : fields.String(required=True, description='User last name'),
     'email' : fields.String(required=True, description='User Email address'),
@@ -93,7 +95,8 @@ class UserList(Resource):
     @api.marshal_list_with(user, envelope="User_list")
     def get(self):
         '''List all users'''
-        return USERS.User
+        tuples = dbfn.queryDB('select * from users')
+        return tuples
 
     @api.doc('create_user')
     @api.expect(user)

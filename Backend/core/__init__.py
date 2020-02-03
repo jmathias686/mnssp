@@ -11,9 +11,14 @@ dbquery = db.connect()
 #returns tuples of entries, loop to show
 def queryDB(query):
     qobject = dbquery.execute(query)
-    return qobject
+    arrays = []
+    for r in qobject:
+        arrays.append(r)
+    return arrays
 
 def commitDB(query):
     dbquery.execute(query)
     dbquery.commit()
     return
+
+
