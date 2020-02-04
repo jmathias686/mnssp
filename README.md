@@ -61,7 +61,7 @@ stay on root file of mnssp
 `pg_ctl init -D ./backend/core/postgres`
 
 #### start postgres and load sample data
-`pg_ctl -D ./backend/core/postgres -h logfile start`
+`pg_ctl -D ./backend/core/postgres -l logfile start`
 
 `psql ./backend/core/postgres < ./backend/core/m_schema.sql`
 
