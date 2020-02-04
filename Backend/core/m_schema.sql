@@ -1,22 +1,22 @@
 CREATE TABLE if not exists users(--user information, and their votes also
-    userID serial PRIMARY KEY,
+    user_id serial PRIMARY KEY,
     email text NOT NULL,
     first_name text NOT NULL,
     last_name text NOT NULL,
     vote_id int NOT NULL,
-    dining_order text
-);
-
-CREATE TABLE if not exists events(--actual event
-    eventsID serial PRIMARY KEY,
-    dates   character(10),
-    selected_movie int references poll(movieID),
-    movie_goers int[],
-    dining_goers int []
+    attending boolean
 );
 
 CREATE TABLE if not exists poll( --only has movie objects
-    movieID serial PRIMARY KEY,
-    movie_details   json,
-    toShow  boolean
+    movie_id serial PRIMARY KEY,
+    movie_title text,
+    movie_details json,
+    to_show  boolean
+);
+
+CREATE TABLE if not exists events(--actual event
+    events_id serial PRIMARY KEY,
+    dates   character(10),
+    selected_movie int references poll(movie_id),
+    movie_goers int[]
 );

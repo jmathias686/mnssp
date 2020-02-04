@@ -1,15 +1,7 @@
 from flask_restplus import Namespace, Resource, fields
-
+import core as dbfn
 api = Namespace('Events', description='Events related operations')
 
-
-address = api.model('address', {
-    'address_1' : fields.String(default='505/525 George St'),
-    'address_2' : fields.String(default=''),
-    'city' : fields.String(default='Sydney'),
-    'state' : fields.String(default='NSW'),
-    'postcode' : fields.String(default='2000'),
-})
 
 users_attending = api.model('users', {
     'user_id' : fields.Integer(attribute='id',readonly=True)
@@ -17,89 +9,11 @@ users_attending = api.model('users', {
 
 events = api.model('event', {
     'id': fields.String(readonly=True, description='The event identifier'),
-    'movie' : fields.String(required=True, description='The movie name'),
-    'location' : fields.Nested(address,description='The location of movie'),
+    'movie_title' : fields.String(required=True, description='The movie name'),
+    #'movie_detail' : fields.json(something)?
     'date' : fields.String(required=True,description='The date of movie'),
-    'time' : fields.String(required=True, default='12:00', description='The time of movie'),
-    'no_attend' : fields.Integer(required=True, description='The number of attendees'),
     'attendees' : fields.List(fields.Nested(users_attending), description='The list of attendees'),
 })
-
-
-class UserDAO(object):
-    def __init__(self):
-        self.counter = 0
-        self.User = []
-
-    def get(self, id):
-        for usr in self.User:
-            if usr['id'] == id:
-                return usr
-        api.abort(404, "User {} doesn't exist".format(id))
-
-    def create(self, data):
-        usr = data
-        usr['id'] = self.counter = self.counter + 1
-        self.User.append(usr)
-        return usr
-
-    def update(self, id, data):
-        usr = self.get(id)
-        usr.update(data)
-        return usr
-
-    def delete(self, id):
-        usr = self.get(id)
-        self.User.remove(usr)
-
-
-USERS = UserDAO()
-
-USERS.create({'name' : 'aaa'})
-USERS.create({'name' : 'bbb'})
-USERS.create({'name' : 'ccc'})
-USERS.create({'name' : 'ddd'})
-
-
-
-
-
-
-class EventsDAO(object):
-    def __init__(self):
-        self.counter = 0
-        self.Event = []
-
-    def get(self, id):
-        for ind in self.Event:
-            if ind['id'] == id:
-                return ind
-        api.abort(404, "Event {} doesn't exist".format(id))
-
-    def create(self, data):
-        ind = data
-        ind['id'] = self.counter = self.counter + 1
-        ind['no_attend'] = len(USERS.User)
-        ind['attendees'] = USERS.User
-        self.Event.append(ind)
-        return ind
-
-    def update(self, id, data):
-        ind = self.get(id)
-        ind.update(data)
-        return ind
-
-    def delete(self, id):
-        ind = self.get(id)
-        self.Event.remove(ind)
-
-
-EVENTS = EventsDAO()
-EVENTS.create({'movie': 'BadBois4Lyf', 'date': '12/1/17'})
-
-
-
-
 
 @api.route('/')
 class EventList(Resource):
@@ -107,15 +21,15 @@ class EventList(Resource):
     @api.marshal_list_with(events)
     def get(self):
         '''List all events'''
-        return EVENTS.Event
+        return dbfn.queryDB('select * from events'), 200
 
     @api.doc('create_event')
     @api.expect(events)
-    @api.marshal_with(events, code=201)
     def post(self):
         '''Create a new Event'''
-        return EVENTS.create(api.payload), 201
-
+        insert_string = api.payload['date'] + ',' + api.payload['movie_title']
+        dbfn.commitDB('insert into events (dates, selected_movie) values (' + insert_string + ')')
+        return {"message": "events created"}
 
 @api.route('/current')
 class Event(Resource):
@@ -123,8 +37,18 @@ class Event(Resource):
     @api.marshal_with(events)
     def get(self):
         '''Get current event'''
-        id = EVENTS.counter
-        return EVENTS.get(id)
+        #assumption all events are made in order
+        return dbfn.queryDB('select * from events order by events_id DESC limit 1')
+#TODO -------------------------------------------
+@api.route('/current/<int:id>')
+class EventAttendee(Resource):
+    @api.doc('update_goer')
+    def patch(self,id):
+        curr = dbfn.queryDB('select movie_goers from events order by events_id DESC limit 1')
+        # manipulate the movie_goers list and append new id
+        # quick call into 'update events set movie_goers = ' + new_list + ' where events_id = max(events_id)'
+        dbfn.commitDB('')
+        return
 
 
 @api.route('/<int:id>')
@@ -135,5 +59,5 @@ class EventSpecific(Resource):
     @api.marshal_with(events)
     def get(self, id):
         '''Get specific event given identifier - for past events'''
-        return EVENTS.get(id)
+        return dbfn.queryDB('select * from events where events_id = '+str(id))
         # api.abort(404)
