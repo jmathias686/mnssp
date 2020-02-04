@@ -88,7 +88,7 @@ class Attending(Resource):
 @api.route('/attending/<int:id>/<string:attend>')
 class userAttending(Resource):
     @api.doc('Update attendance of specific user')
-    def post(self, id, attend):
+    def patch(self, id, attend):
         # usr = USERS.get(id)
         dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
         return {"message": "attendance updated to "+ attend}, 204

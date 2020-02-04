@@ -6,7 +6,7 @@ api = Namespace('Poll', description='User related operations')
 movies = api.model('movies', {
     'movie_id': fields.Integer(readonly=True, description='User unique ID'),
     'movieObject': fields.String(required=True, description='Movie Object'),
-    'to_show' : fields.boolean(value = False)
+    'to_show' : fields.Boolean()
 })
 
 @api.route('/')
@@ -18,7 +18,8 @@ class MovieList(Resource):
         return dbfn.queryDB('select * from poll')
     #needs working on for payload-------------------------------------------------
     @api.doc('add_movie_poll')
-    def post(self, jsonObj):
+    def post(self):
+        jsonObj = api.payload
         dbfn.commitDB('insert into poll (movie_details, to_show) values ('+ jsonObj +', false)')
         return {"message":"movie option added"}
 
@@ -43,6 +44,6 @@ class Movie(Resource):
         return dbfn.queryDB('select * from poll where movie_id = '+str(id))
     @api.doc('update_movie')
     def patch(self, id):
-        '''update a movie given an identifier'''
+        '''update a movie to show given an identifier'''
         dbfn.commitDB('update poll set to_show = true where movie_id = '+str(id))
         return {"message":"movie showing"}, 204
