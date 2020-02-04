@@ -18,6 +18,7 @@ export default class Routes extends Component {
                     <Route path="/SignUp">
                         <SignUp />
                     </Route>
+                    
                 </Switch>
             </Router>
         )
