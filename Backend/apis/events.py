@@ -31,6 +31,21 @@ class EventList(Resource):
         dbfn.commitDB('insert into events (dates, selected_movie) values (' + insert_string + ')')
         return {"message": "events created"}
 
+@api.route('/<int:id>')
+@api.param('id', 'The Event identifier')
+@api.response(404, 'Event not found')
+class EventSpecific(Resource):
+    @api.doc('get_specific_event')
+    @api.marshal_with(events)
+    def get(self, id):
+        '''Get specific event given identifier - for past events'''
+        return dbfn.queryDB('select * from events where events_id = '+str(id))
+        # api.abort(404)
+    def delete(self,id):
+        '''deletes a single event given identifier'''
+        dbfn.commitDB('delete from events where events_id = '+id)
+        return {"message" : "event deleted"}, 204
+
 @api.route('/current')
 class Event(Resource):
     @api.doc('get_event')
@@ -44,20 +59,9 @@ class Event(Resource):
 class EventAttendee(Resource):
     @api.doc('update_goer')
     def patch(self,id):
+        '''modifies movie goer list'''
         curr = dbfn.queryDB('select movie_goers from events order by events_id DESC limit 1')
         # manipulate the movie_goers list and append new id
         # quick call into 'update events set movie_goers = ' + new_list + ' where events_id = max(events_id)'
         dbfn.commitDB('')
         return
-
-
-@api.route('/<int:id>')
-@api.param('id', 'The Event identifier')
-@api.response(404, 'Event not found')
-class EventSpecific(Resource):
-    @api.doc('get_specific_event')
-    @api.marshal_with(events)
-    def get(self, id):
-        '''Get specific event given identifier - for past events'''
-        return dbfn.queryDB('select * from events where events_id = '+str(id))
-        # api.abort(404)

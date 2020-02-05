@@ -71,9 +71,6 @@ class User(Resource):
         #query = 
         #dbfn.commitDB('update users set '+ query +'where user_id = '+id) 
         return {'message':'user ' +id+' updated'}
-    
-
-
 
 @api.route('/attending')
 class Attending(Resource):
@@ -85,31 +82,11 @@ class Attending(Resource):
         print(tuples)
         return tuples
 
-@api.route('/attending/<int:id>/<string:attend>')
+@api.route('/attending/<int:id>')
 class userAttending(Resource):
     @api.doc('Update attendance of specific user')
     def patch(self, id, attend):
         # usr = USERS.get(id)
+
         dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
         return {"message": "attendance updated to "+ attend}, 204
-
-    
-
-
-@api.route('/emails')
-class Emails(Resource):
-    @api.doc('get_user_emails')
-    @api.marshal_with(email, envelope="Email_list")
-    def get(self):
-        '''List all user emails'''
-        return dbfn.queryDB('select email from users')
-
-
-@api.route('/emails/<int:id>')
-class singleEmail(Resource):
-    @api.doc('get_specific_email')
-    @api.marshal_with(email)
-    def get(self,id):
-        '''Show specific user email'''
-        return dbfn.queryDB('select email from users where user_id = '+str(id))
-
