@@ -8,10 +8,9 @@ users_attending = api.model('users', {
 })
 
 events = api.model('event', {
-    'id': fields.String(readonly=True, description='The event identifier'),
-    'movie_title' : fields.String(required=True, description='The movie name'),
-    #'movie_detail' : fields.json(something)?
-    'date' : fields.String(required=True,description='The date of movie'),
+    'events_id': fields.String(readonly=True, description='The event identifier'),
+    'selected_movie' : fields.String(required=True, description='The movie name'),
+    'dates' : fields.String(required=True,description='The date of movie'),
     'attendees' : fields.List(fields.Nested(users_attending), description='The list of attendees'),
 })
 
@@ -57,11 +56,16 @@ class Event(Resource):
 #TODO -------------------------------------------
 @api.route('/current/<int:id>')
 class EventAttendee(Resource):
-    @api.doc('update_goer')
-    def patch(self,id):
+    @api.doc('update_add_goer')
+    def post(self,id):
         '''modifies movie goer list'''
-        curr = dbfn.queryDB('select movie_goers from events order by events_id DESC limit 1')
-        # manipulate the movie_goers list and append new id
-        # quick call into 'update events set movie_goers = ' + new_list + ' where events_id = max(events_id)'
-        dbfn.commitDB('')
-        return
+        curr = dbfn.queryDB('select attendees from events order by events_id DESC limit 1')
+        
+        return {"message": id + "added on to list"}, 204
+    @api.doc('update_remove_goer')
+    def delete(self,id):
+        '''modifies movie goer list'''
+        curr = dbfn.queryDB('select attendees from events order by events_id DESC limit 1')
+        
+        return {"message" : id + "removed from list"}, 204
+    
