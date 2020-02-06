@@ -16,8 +16,9 @@ user = api.model('User', {
     'first_name': fields.String(required=True, description='User first name'),
     'last_name' : fields.String(required=True, description='User last name'),
     'email' : fields.String(required=True, description='User Email address'),
+    'pass_word' : fields.String(required=True, description='User\'s password'),
     'attending': fields.Boolean(description='If User attending next event'),
-    'vote_id' : fields.Integer(default=-1, description='What movie User has voted on')
+    'vote_id' : fields.Integer(default=0, description='What movie User has voted on')
 })
 
 email = api.model('Email', {'email' : fields.String(required=True, description= 'the user email address')})
@@ -39,8 +40,8 @@ class UserList(Resource):
         '''Create a new User'''
         #need pass down values
         print(((api.payload['first_name'])))
-        insert_str = '\'' + api.payload['first_name'] + '\', \'' + api.payload['last_name'] + '\', \'' + api.payload['email'] +'\', false, 0'
-        dbfn.commitDB('insert into users (first_name, last_name, email, attending, vote_id) values ('+ insert_str +')')
+        insert_str = '\'' + api.payload['first_name'] + '\', \'' + api.payload['last_name'] + '\', \'' + api.payload['email'] +'\', \'' + api.payload['pass_word'] + '\', false, 0'
+        dbfn.commitDB('insert into users (first_name, last_name, email, pass_word, attending, vote_id) values ('+ insert_str +')')
         return { 'message' : 'user create success' }, 201
 
 
@@ -72,17 +73,17 @@ class User(Resource):
         #dbfn.commitDB('update users set '+ query +'where user_id = '+id) 
         return {'message':'user ' +id+' updated'}
 
-@api.route('/attending')
+@api.route('/attendee')
 class Attending(Resource):
     @api.doc('get_list_of_attending_users')
     @api.marshal_list_with(user)
     def get(self):
         '''List all users attending'''
-        tuples = dbfn.queryDB('select * from users where attending = true')
+        tuples = dbfn.queryDB('select first_name, last_name from users where attending = true')
         print(tuples)
         return tuples
 
-@api.route('/attending/<int:id>')
+@api.route('/attendee/<int:id>')
 class userAttending(Resource):
     @api.doc('Update attendance of specific user')
     def patch(self, id, attend):
@@ -90,3 +91,4 @@ class userAttending(Resource):
 
         dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
         return {"message": "attendance updated to "+ attend}, 204
+
