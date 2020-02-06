@@ -6,6 +6,7 @@ import Routes from './components/Routes'
 // import history from './components/history'
 import Copyright from './components/Copyright/Copyright'
 import Box from '@material-ui/core/Box';
+import Poll from './components/Poll'
 
 
 class App extends Component {
@@ -14,10 +15,11 @@ class App extends Component {
       <div>
         <NavBar />
         {/* <ButtonRouter /> */}
-        <Routes />
+        {/* <Routes />
         <Box mt={5}>
           <Copyright />
-        </Box>
+        </Box> */}
+        <Poll />
       </div>
     );
   }

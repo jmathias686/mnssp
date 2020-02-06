@@ -1,0 +1,76 @@
+2020-02-05 08:04:19.215 AEDT [9989] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:04:19.215 AEDT [9989] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/./backend/core/postgres"?
+2020-02-05 08:04:27.800 AEDT [10009] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:04:27.800 AEDT [10009] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/./backend/core/postgres"?
+2020-02-05 08:04:53.896 AEDT [10029] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:04:53.896 AEDT [10029] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/Backend/core/postgres"?
+2020-02-05 08:05:09.342 AEDT [10037] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:05:09.342 AEDT [10037] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/./Backend/core/postgres"?
+2020-02-05 08:05:21.266 AEDT [10059] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:05:21.266 AEDT [10059] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/./Backend/core/postgres"?
+2020-02-05 08:05:32.273 AEDT [10069] FATAL:  lock file "postmaster.pid" already exists
+2020-02-05 08:05:32.273 AEDT [10069] HINT:  Is another postmaster (PID 45267) running in data directory "/Users/jomathias/hackathon/mnssp/./Backend/core/postgres"?
+2020-02-05 09:07:17.731 AEDT [10344] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:07:17.734 AEDT [10344] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-02-05 09:07:17.734 AEDT [10344] LOG:  listening on IPv6 address "::1", port 5432
+2020-02-05 09:07:17.759 AEDT [10344] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-02-05 09:07:17.842 AEDT [10345] LOG:  database system was shut down at 2020-02-05 09:07:10 AEDT
+2020-02-05 09:07:17.906 AEDT [10344] LOG:  database system is ready to accept connections
+2020-02-05 09:07:23.937 AEDT [10378] FATAL:  database "./backend/core/postgres" does not exist
+2020-02-05 09:07:46.190 AEDT [10344] LOG:  received fast shutdown request
+2020-02-05 09:07:46.192 AEDT [10344] LOG:  aborting any active transactions
+2020-02-05 09:07:46.195 AEDT [10344] LOG:  background worker "logical replication launcher" (PID 10351) exited with exit code 1
+2020-02-05 09:07:46.196 AEDT [10346] LOG:  shutting down
+2020-02-05 09:07:46.258 AEDT [10344] LOG:  database system is shut down
+2020-02-05 09:08:02.586 AEDT [10405] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:08:02.589 AEDT [10405] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-02-05 09:08:02.589 AEDT [10405] LOG:  listening on IPv6 address "::1", port 5432
+2020-02-05 09:08:02.590 AEDT [10405] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-02-05 09:08:02.609 AEDT [10406] LOG:  database system was shut down at 2020-02-05 09:07:46 AEDT
+2020-02-05 09:08:02.616 AEDT [10405] LOG:  database system is ready to accept connections
+2020-02-05 09:08:12.788 AEDT [10431] FATAL:  database "Backend/core/postgres/" does not exist
+2020-02-05 09:09:24.012 AEDT [10668] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:09:24.015 AEDT [10668] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-02-05 09:09:24.015 AEDT [10668] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:09:24.015 AEDT [10668] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-02-05 09:09:24.015 AEDT [10668] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:09:24.015 AEDT [10668] WARNING:  could not create listen socket for "localhost"
+2020-02-05 09:09:24.015 AEDT [10668] FATAL:  could not create any TCP/IP sockets
+2020-02-05 09:09:24.015 AEDT [10668] LOG:  database system is shut down
+2020-02-05 09:09:37.173 AEDT [10405] LOG:  received fast shutdown request
+2020-02-05 09:09:37.176 AEDT [10405] LOG:  aborting any active transactions
+2020-02-05 09:09:37.177 AEDT [10405] LOG:  background worker "logical replication launcher" (PID 10412) exited with exit code 1
+2020-02-05 09:09:37.179 AEDT [10407] LOG:  shutting down
+2020-02-05 09:09:37.217 AEDT [10405] LOG:  database system is shut down
+2020-02-05 09:09:40.871 AEDT [10699] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:09:40.874 AEDT [10699] LOG:  listening on IPv4 address "127.0.0.1", port 5432
+2020-02-05 09:09:40.875 AEDT [10699] LOG:  listening on IPv6 address "::1", port 5432
+2020-02-05 09:09:40.895 AEDT [10699] LOG:  listening on Unix socket "/tmp/.s.PGSQL.5432"
+2020-02-05 09:09:40.917 AEDT [10700] LOG:  database system was shut down at 2020-02-05 09:09:10 AEDT
+2020-02-05 09:09:40.941 AEDT [10699] LOG:  database system is ready to accept connections
+2020-02-05 09:10:02.524 AEDT [10723] FATAL:  database "Backend/core/postgres/test/" does not exist
+2020-02-05 09:11:22.827 AEDT [10810] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:11:22.829 AEDT [10810] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-02-05 09:11:22.829 AEDT [10810] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:11:22.829 AEDT [10810] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-02-05 09:11:22.829 AEDT [10810] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:11:22.829 AEDT [10810] WARNING:  could not create listen socket for "localhost"
+2020-02-05 09:11:22.830 AEDT [10810] FATAL:  could not create any TCP/IP sockets
+2020-02-05 09:11:22.830 AEDT [10810] LOG:  database system is shut down
+2020-02-05 09:12:39.715 AEDT [10931] LOG:  starting PostgreSQL 12.1 on x86_64-apple-darwin18.7.0, compiled by Apple clang version 11.0.0 (clang-1100.0.33.16), 64-bit
+2020-02-05 09:12:39.718 AEDT [10931] LOG:  could not bind IPv4 address "127.0.0.1": Address already in use
+2020-02-05 09:12:39.718 AEDT [10931] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:12:39.718 AEDT [10931] LOG:  could not bind IPv6 address "::1": Address already in use
+2020-02-05 09:12:39.718 AEDT [10931] HINT:  Is another postmaster already running on port 5432? If not, wait a few seconds and retry.
+2020-02-05 09:12:39.718 AEDT [10931] WARNING:  could not create listen socket for "localhost"
+2020-02-05 09:12:39.718 AEDT [10931] FATAL:  could not create any TCP/IP sockets
+2020-02-05 09:12:39.719 AEDT [10931] LOG:  database system is shut down
+2020-02-05 09:14:41.009 AEDT [10701] PANIC:  could not open file "/Users/jomathias/hackathon/mnssp/Backend/core/postgres/test/global/pg_control": No such file or directory
+2020-02-05 09:14:42.681 AEDT [10699] LOG:  checkpointer process (PID 10701) was terminated by signal 6: Abort trap: 6
+2020-02-05 09:14:42.681 AEDT [10699] LOG:  terminating any other active server processes
+2020-02-05 09:14:42.681 AEDT [10704] WARNING:  terminating connection because of crash of another server process
+2020-02-05 09:14:42.681 AEDT [10704] DETAIL:  The postmaster has commanded this server process to roll back the current transaction and exit, because another server process exited abnormally and possibly corrupted shared memory.
+2020-02-05 09:14:42.681 AEDT [10704] HINT:  In a moment you should be able to reconnect to the database and repeat your command.
+2020-02-05 09:14:42.684 AEDT [10699] LOG:  all server processes terminated; reinitializing
+2020-02-05 09:14:42.694 AEDT [10699] FATAL:  could not stat data directory "/Users/jomathias/hackathon/mnssp/Backend/core/postgres/test": No such file or directory
+2020-02-05 09:14:42.695 AEDT [10699] LOG:  database system is shut down

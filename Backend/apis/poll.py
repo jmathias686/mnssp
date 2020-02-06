@@ -3,16 +3,27 @@ import core as dbfn
 
 api = Namespace('Poll', description='User related operations')
 
+
 movies = api.model('movies', {
-    'movie_id': fields.Integer(readonly=True, description='User unique ID'),
-    'movieObject': fields.String(required=True, description='Movie Object'),
-    'to_show' : fields.Boolean()
+    'title': fields.String(required=True, description='Title'),
+    'overview' : fields.String(required=True, description='Overview'),
+    'popularity' : fields.Integer(readonly=True, description='Popularity'), #could change to Id corresponding to movieDB or something?
+    'vote_average' : fields.Integer(readonly=True, description='Vote Average'),
+    'vote_count' : fields.Integer(readonly=True, description='Vote Count')
 })
+
+poll = api.model('poll', {
+    'movie_id': fields.Integer(readonly=True, description='Movies unique ID'),
+    'movie_title': fields.String(required = True, description='Movie Title for easy access'),
+    'movie_details' : fields.Nested(movies, required = True, description = 'Movie Details'),
+    'to_show' : fields.Boolean(default = False)
+})
+
 
 @api.route('/')
 class MovieList(Resource):
     @api.doc('movie_list')
-    @api.marshal_list_with(movies)
+    @api.marshal_list_with(poll)
     def get(self):
         '''List all cats'''
         return dbfn.queryDB('select * from poll')

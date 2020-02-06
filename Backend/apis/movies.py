@@ -28,7 +28,7 @@ def movies(self):
         if m['popularity'] > 110:
             titles.append(m['title'])
     print(titles)
-return parsed_json
+
 
 
 
@@ -38,3 +38,5 @@ return parsed_json
 # f=open("now_playing.json", "w+")
 # f.write(json.dumps(json.loads(r.text), indent=4, sort_keys=True))
 # f.close()
+
+return parsed_json
