@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import NavBar from './components/NavBar/NavBar'
 import Routes from './components/Routes'
 // import SignIn from './components/SignIn/SignIn'
-// import ButtonRouter from './ButtonRouter'
 // import history from './components/history'
 import Copyright from './components/Copyright/Copyright'
 import Box from '@material-ui/core/Box';
@@ -14,12 +13,11 @@ class App extends Component {
     return (
       <div>
         <NavBar />
-        {/* <ButtonRouter /> */}
-        {/* <Routes />
+        <Routes />
         <Box mt={5}>
           <Copyright />
-        </Box> */}
-        <Poll />
+        </Box>
+        {/* <Poll /> */}
       </div>
     );
   }

@@ -41,7 +41,7 @@ export default function SignUp() {
   const classes = useStyles();
 
   function handleSignInClick() {
-    history.push('/')
+    history.push('/Poll')
   }
 
 
@@ -118,6 +118,7 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSignInClick}
           >
             Sign Up
           </Button>
