@@ -43,13 +43,12 @@ const useStyles = makeStyles(theme => ({
 export default function SignIn() {
   const classes = useStyles();
 
-  function handleSubmit() {
-    history.push('/')
-  }
-
-
   function handleSignUpClick() {
     history.push('/SignUp')
+  }
+
+  function handleSignIn() {
+    history.push('/Poll')
   }
 
   function handleForgotPasswordClick() {
@@ -102,7 +101,7 @@ export default function SignIn() {
             variant="contained"
             color="primary"
             className={classes.submit}
-            onClick={handleSubmit}
+            onClick={handleSignIn}
             to ='/'
           >
             Sign In

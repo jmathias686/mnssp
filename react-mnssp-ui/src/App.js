@@ -5,7 +5,7 @@ import Routes from './components/Routes'
 // import history from './components/history'
 import Copyright from './components/Copyright/Copyright'
 import Box from '@material-ui/core/Box';
-import Poll from './components/Poll'
+// import Poll from './components/Poll'
 
 
 class App extends Component {
