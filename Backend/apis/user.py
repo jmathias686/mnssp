@@ -76,19 +76,17 @@ class User(Resource):
 @api.route('/attendee')
 class Attending(Resource):
     @api.doc('get_list_of_attending_users')
-    @api.marshal_list_with(user)
+    @api.marshal_list_with(names)
     def get(self):
         '''List all users attending'''
         tuples = dbfn.queryDB('select first_name, last_name from users where attending = true')
         print(tuples)
         return tuples
 
-@api.route('/attendee/<int:id>')
+@api.route('/attendee/<int:id>/<string:attend>')
 class userAttending(Resource):
     @api.doc('Update attendance of specific user')
     def patch(self, id, attend):
         # usr = USERS.get(id)
-
         dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
         return {"message": "attendance updated to "+ attend}, 204
-
