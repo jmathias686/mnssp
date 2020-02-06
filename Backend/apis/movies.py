@@ -39,4 +39,4 @@ def movies(self):
 # f.write(json.dumps(json.loads(r.text), indent=4, sort_keys=True))
 # f.close()
 
-return parsed_json
+    return parsed_json

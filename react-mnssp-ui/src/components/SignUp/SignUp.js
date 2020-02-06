@@ -40,6 +40,10 @@ const useStyles = makeStyles(theme => ({
 export default function SignUp() {
   const classes = useStyles();
 
+  function handleSignUp() {
+    history.push('/Poll')
+  }
+
   function handleSignInClick() {
     history.push('/')
   }
@@ -118,6 +122,7 @@ export default function SignUp() {
             variant="contained"
             color="primary"
             className={classes.submit}
+            onClick={handleSignUp}
           >
             Sign Up
           </Button>
