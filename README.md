@@ -55,6 +55,9 @@ linux ubuntu: `sudo apt-get install postgresql`
 
 `pip3 install sqlalchemy`
 
+`pip3 install -U flask-cors`
+You might need to install a browser extension to allow CORS
+
 #### create postgresql database
 stay on root file of mnssp
 
