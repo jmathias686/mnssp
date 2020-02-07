@@ -12,12 +12,13 @@ class Chart extends Component {
       }
 
     static defaultProps= {
-        displayTitle:true,
+        displayTitle:false,
     }
 
     render() {
         return (
             <div className="chart">
+                <h1>Votes for Movie Night</h1>
                 <Bar
                     data = {this.state.chartData}
                     options={{

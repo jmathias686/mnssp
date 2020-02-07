@@ -90,3 +90,11 @@ class userAttending(Resource):
         # usr = USERS.get(id)
         dbfn.commitDB('update users set attending = '+ attend +' where user_id = '+str(id)) 
         return {"message": "attendance updated to "+ attend}, 204
+
+
+@api.route('/email')
+class emailAccess(Resource):
+    @api.doc('search via email')
+    @api.marshal_with(user)
+    def get(self):
+        return dbfn.queryDB('select * from users where email = \''+api.payload['email']+'\'')

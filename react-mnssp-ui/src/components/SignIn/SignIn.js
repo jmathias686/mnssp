@@ -60,7 +60,6 @@ export default function SignIn() {
       <CssBaseline />
       <div className={classes.paper}>
         <Avatar className={classes.avatar}>
-          {/* <LockOutlinedIcon /> */}
         </Avatar>
         <Typography component="h1" variant="h5">
           Movie Night Self Service
@@ -122,9 +121,6 @@ export default function SignIn() {
           </Grid>
         </form>
       </div>
-      {/* <Box mt={8}>
-        <Copyright />
-      </Box> */}
     </Container>
   );
 }
