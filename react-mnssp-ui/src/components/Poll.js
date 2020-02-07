@@ -4,13 +4,15 @@ import Grid from '@material-ui/core/Grid'
 import Container from '@material-ui/core/Container'
 // import Box from '@material-ui/core/Box'
 import Chart from './Chart/Chart'
+import Attendance from './Attendance'
 
 
 export class Poll extends Component {
     state= {
         loading:true,
         poll:null,
-        chartData:{}
+        chartData:{},
+        list:{}
     }
 
     random_rgba() {
@@ -64,6 +66,7 @@ export class Poll extends Component {
         const data = await response.json();
         data[0].count = 7;
         data[1].count = 4;
+
         this.newState(data);
         console.log(this.state.chartData)
         console.log(this.state.poll);
@@ -83,6 +86,9 @@ export class Poll extends Component {
                     </Grid>
                     <Grid item m>
                         <h1>Attendance List</h1>
+                        <Container maxWidth='md'>
+                            <Attendance/>
+                        </Container>
                     </Grid>
                 </Grid>
                 

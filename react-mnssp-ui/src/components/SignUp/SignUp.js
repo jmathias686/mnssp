@@ -43,27 +43,28 @@ export class SignUp extends Component {
       postData : {
         first_name : '',
         last_name : '',
-        email : ''
+        email : 'd'
       }
     }
   }
 
-  async handleSignUp() {
-    (async () => {
-      const rawResponse = await fetch('http://localhost:5000/Users/', {
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        method: "POST",
-        body: JSON.stringify(this.state.postData)
-      });
-      const content = await rawResponse.json();
+  handleSignUp() {
+    // console.log(this.state.postData);
+    // (async () => {
+    //   const rawResponse = await fetch('http://localhost:5000/Users/', {
+    //     headers: {
+    //       'Accept': 'application/json',
+    //       'Content-Type': 'application/json'
+    //     },
+    //     method: "POST",
+    //     body: JSON.stringify(this.state.postData)
+    //   });
+    //   const content = await rawResponse.json();
     
-      console.log(content);
-    })();
+    //   console.log(content);
+    // })();
 
-    // history.push('/Poll')
+    history.push('/Poll')
   }
 
   handleSignInClick() {
