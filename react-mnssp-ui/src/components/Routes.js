@@ -16,10 +16,10 @@ export default class Routes extends Component {
                     <Route exact path="/">
                         <SignIn />
                     </Route>
-                    <Route path="/SignUp">
+                    <Route exact path="/SignUp">
                         <SignUp />
                     </Route>
-                    <Route path="/Poll">
+                    <Route exact path="/Poll">
                         <Poll />
                     </Route>
                 </Switch>
