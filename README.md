@@ -40,6 +40,11 @@ Install extension for flask
 
 `pip3 install flask-restplus`
 
+Install CORS extension for flask
+
+`pip3 install -U flask-cors`
+You might need to install a browser extension to allow CORS
+
 The backend should be ready for development.
 
 ## Database Setup: (Postgresql + psycopg2/sqlalchemy)
@@ -52,11 +57,10 @@ linux ubuntu: `sudo apt-get install postgresql`
 `pip3 install -g pip3`
 
 `pip3 install psycopg2`
+Note: If you have issues installing psycopg2, you might need to run:
+`pip3 install psycopg2-binary`
 
 `pip3 install sqlalchemy`
-
-`pip3 install -U flask-cors`
-You might need to install a browser extension to allow CORS
 
 #### create postgresql database
 stay on root file of mnssp
