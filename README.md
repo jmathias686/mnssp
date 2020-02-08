@@ -2,13 +2,16 @@
 The project currently is comprised of:
 
 **Database:** *Postgresql + psycopg2/sqlalchemy*
+    
     3 entities within the database - Users, Events, Poll
     do consult `./backend/core/m_schema.sql`
 
 **Backend:** *Python Flask-restplus*
+    
     Foundation made, can be expanded upon via namespaces in apis endpoint as well as core for any internal logics
 
-Frontend: Javascript React-app + material-ui
+**Frontend:** *Javascript React-app + material-ui*
+    
     Multi page application with different components for extension
 
 # Set up
@@ -22,21 +25,22 @@ If developing on Linux, then use
 
 `sudo apt-get` instead of `brew`
 
-
 *Alternatively - you may install homebrew for linux or a WSL system and follow the below instructions*
 
 ## Backend + Database Setup (Simple setup)
 *If you wish to do a full setup and avoid install redundant libraries, skip to Backend Setup*
 
 If not already, install python3.x
+
 `brew install python3`
 
 If not already, install postgresql onto computer
+
 `brew install postgres`
 
 Install pip3 libraries: *Make sure you are in the base directory /mnssp*
-`pip3 install -r requirements.txt`
 
+`pip3 install -r requirements.txt`
 
 ## Manual Setup for Backend + Database
 ### Backend setup: (python + flask-restplus)
@@ -69,7 +73,8 @@ linux ubuntu: `sudo apt-get install postgresql`
 `pip3 install -g pip3`
 
 `pip3 install psycopg2`
-Note: If you have issues installing psycopg2, you might need to run:
+
+*Note: If you have issues installing psycopg2, you might need to run:*
 `pip3 install psycopg2-binary`
 
 `pip3 install sqlalchemy`
