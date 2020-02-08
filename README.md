@@ -28,7 +28,7 @@ If developing on Linux, then use
 *Alternatively - you may install homebrew for linux or a WSL system and follow the below instructions*
 
 ## Backend + Database Setup (Simple setup)
-*If you wish to do a full setup and avoid install redundant libraries, skip to Backend Setup*
+*If you wish to do a full setup and avoid installing redundant libraries, skip to Backend Setup*
 
 If not already, install python3.x
 
@@ -110,7 +110,7 @@ Created in React js using facebook/create-react-app
 
 #### install package dependency for the frontned apps
 
-`npm install ./frontend/package.json` 
+`npm install ./react-mnssp-ui/package.json` 
 
 Front end should be ready to go
 
