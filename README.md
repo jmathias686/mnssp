@@ -1,34 +1,46 @@
-# Will be instructions on setting up the entire codebase
+# Instructions for setup of codebase
 The project currently is comprised of:
 
-Database: Postgresql + psycopg2/sqlalchemy
-
-    so far: 3 entities within the database, Users, Events, Poll
+**Database:** *Postgresql + psycopg2/sqlalchemy*
+    3 entities within the database - Users, Events, Poll
     do consult `./backend/core/m_schema.sql`
 
-Backend: Python Flask-restplus 
-
-    so far: foundation made, can be expanded upon via namespaces in apis endpoint as well as core for any internal logics
+**Backend:** *Python Flask-restplus*
+    Foundation made, can be expanded upon via namespaces in apis endpoint as well as core for any internal logics
 
 Frontend: Javascript React-app + material-ui
-    
-    so far: it's a single page application with different components for extension
+    Multi page application with different components for extension
 
 # Set up
 The set up guide is done based on Mac's OSX as was developed on mac book, instructions will be focused on using HomeBrew. 
 
-install HomeBrew if not already, 
+Install HomeBrew if not already:
 
-`https://brew.sh/`
+**Homebrew Page:** [brew.sh](https://brew.sh/)
 
-if developing on Linux, then do use 
+If developing on Linux, then use 
 
 `sudo apt-get` instead of `brew`
 
-and ignore downloading HomeBrew
 
-## Backend setup: (python + flask-restplus)
-If not already, install python3.7
+*Alternatively - you may install homebrew for linux or a WSL system and follow the below instructions*
+
+## Backend + Database Setup (Simple setup)
+*If you wish to do a full setup and avoid install redundant libraries, skip to Backend Setup*
+
+If not already, install python3.x
+`brew install python3`
+
+If not already, install postgresql onto computer
+`brew install postgres`
+
+Install pip3 libraries: *Make sure you are in the base directory /mnssp*
+`pip3 install -r requirements.txt`
+
+
+## Manual Setup for Backend + Database
+### Backend setup: (python + flask-restplus)
+If not already, install python3.x
 
 `brew install python3`
 
@@ -47,7 +59,7 @@ You might need to install a browser extension to allow CORS
 
 The backend should be ready for development.
 
-## Database Setup: (Postgresql + psycopg2/sqlalchemy)
+### Database Setup: (Postgresql + psycopg2/sqlalchemy)
 #### install postgresql onto the computer if not already
 Mac: `brew install postgres`
 
@@ -84,9 +96,8 @@ don't forget to close pg_ctl after usage, otherwise it will keep running!
 `pg_ctl -D ./backend/core/postgres stop`
 
 
-
 ## Front-end Set up
-Done in React js using facebook/create-react-app
+Created in React js using facebook/create-react-app
 
 #### Install NPM used for Javascript
 
@@ -97,6 +108,7 @@ Done in React js using facebook/create-react-app
 `npm install ./frontend/package.json` 
 
 Front end should be ready to go
+
 
 # Running/Testing development
 ### Database info
@@ -116,7 +128,7 @@ by default, this will be listening on port 5000 from app.py configuration, this 
 ### Frontend
 In Frontend, to test it, it's required to change directory into the Front end project folder via:
 
-`cd frontend`
+`cd react-mnssp-ui/src`
 
 Run the following command to deploy it locally for development testing
 
