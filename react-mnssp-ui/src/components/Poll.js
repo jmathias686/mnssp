@@ -16,7 +16,7 @@ export class Poll extends Component {
     }
 
     random_rgba() {
-        return 'rgba(' + String(Math.floor(Math.random() * 256)) + ',' + String(Math.floor(Math.random() * 256)) + ',' + String(Math.floor(Math.random() * 256)) + ', 0.6)';
+        return 'rgba(' + String(Math.floor(Math.random() * 256)) + ',' + String(Math.floor(Math.random() * 256)) + ',' + String(Math.floor(Math.random() * 256)) + ', 0.7)';
     }
 
     background_Color(data) {
@@ -66,9 +66,8 @@ export class Poll extends Component {
         const data = await response.json();
         data[0].count = 7;
         data[1].count = 4;
-
         this.newState(data);
-        console.log(this.state.chartData)
+        console.log(this.state.chartData);
         console.log(this.state.poll);
     }
 

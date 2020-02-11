@@ -1,6 +1,8 @@
 from flask_restplus import Namespace, Resource, fields
 import requests
 import core as dbfn
+from .tmdb import tmdb
+import json
 
 api = Namespace('Poll', description='User related operations')
 
@@ -8,9 +10,9 @@ api = Namespace('Poll', description='User related operations')
 movies = api.model('movies', {
     'title': fields.String(required=True, description='Title'),
     'overview' : fields.String(required=True, description='Overview'),
-    'popularity' : fields.Integer(readonly=True, description='tmdb Popularity'), #could change to Id corresponding to movieDB or something?
-    'vote_average' : fields.Integer(readonly=True, description='tmdb Vote Average'),
-    'vote_count' : fields.Integer(readonly=True, description='tmdb Vote Count')
+    'popularity' : fields.Integer(description='tmdb Popularity'), #could change to Id corresponding to movieDB or something?
+    'vote_average' : fields.Integer(description='tmdb Vote Average'),
+    'vote_count' : fields.Integer(description='tmdb Vote Count')
 })
 
 poll = api.model('poll', {
@@ -24,6 +26,10 @@ poll = api.model('poll', {
 votes = api.model('votes',{
     'votes' : fields.Integer(readonly=True, description=' movie\'s vote ID')
 })
+
+
+
+
 @api.route('/')
 class MovieList(Resource):
     @api.doc('movie_list')
@@ -33,8 +39,11 @@ class MovieList(Resource):
         return dbfn.queryDB('select * from poll')
     #needs working on for payload-------------------------------------------------
     @api.doc('add_movie_options')
+    @api.expect(poll)
     def post(self):
         #change to requests
+        # res = tmdb(self)
+        # print(res)
         jsonObj = api.payload
         dbfn.commitDB('insert into poll (movie_details, to_show) values ('+ jsonObj +', false)')
         return {"message":"movie option added"}

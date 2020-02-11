@@ -85,11 +85,11 @@ stay on root file of mnssp
 `pg_ctl init -D ./backend/core/postgres`
 
 #### start postgres and load sample data
-`pg_ctl -D ./backend/core/postgres -l logfile start`
+`pg_ctl -D Backend/core/postgres -l logfile start`
 
-`psql ./backend/core/postgres < ./backend/core/m_schema.sql`
+`psql Backend/core/postgres < Backend/core/m_schema.sql`
 
-`psql ./backend/core/postgres < ./backend/core/dataentry`
+`psql Backend/core/postgres < Backend/core/dataentry`
 
 The Database will be populated with sample data and is up for development
 
@@ -98,11 +98,13 @@ By default, postgresql will open this on port 5432 to be listened onto, which is
 #### After usage
 don't forget to close pg_ctl after usage, otherwise it will keep running!
 
-`pg_ctl -D ./backend/core/postgres stop`
+`pg_ctl -D Backend/core/postgres stop`
 
 
 ## Front-end Set up
 Created in React js using facebook/create-react-app
+
+#### Install react-chartjs-2 for python
 
 #### Install NPM used for Javascript
 

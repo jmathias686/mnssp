@@ -9,16 +9,19 @@ export class Attendance extends Component {
       }
 
     async componentDidMount() {
-        const url = "http://localhost:5000/Users/attending";
+        const url = "http://localhost:5000/Users/attendee";
         const response = await fetch(url);
         const data = await response.json();
+        console.log(data);
         this.setState({list : data});
     }
-
+    
     render() {
+        var json = this.state;
         return (
             <div>
-                {/* JSON.stringify({this.state.list}) */}
+                <pre>{JSON.stringify(json, null, 2)}</pre>
+                Hello
             </div>
         )
     }
