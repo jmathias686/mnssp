@@ -1,10 +1,10 @@
 --add to user table
 insert into users (first_name, last_name, email, attending, vote_id) values ('Edwin', 'Choi','edchoi@deloitte.com.au', false, 1);
-insert into users (first_name, last_name, email, attending, vote_id) values ('Mufeed', 'Oomatia','moomatia@deloitte.com.au', false, 2);
-insert into users (first_name, last_name, email, attending, vote_id) values ('Joseph', 'Mathias','jomathias@deloitte.com.au', false, 1);
+insert into users (first_name, last_name, email, attending, vote_id) values ('Mufeed', 'Oomatia','moomatia@deloitte.com.au', True, 2);
+insert into users (first_name, last_name, email, attending, vote_id) values ('Joseph', 'Mathias','jomathias@deloitte.com.au', True, 1);
 
 --add to poll as movie object
-insert into poll (movie_title, movie_details, votes, to_show) values ('Bad Boys for Life', '{"overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.", "popularity": 180.005, "title": "Bad Boys for Life", "vote_average": 6.6, "vote_count": 463}', 0, True);
+insert into poll (movie_title, movie_details, votes, to_show) values ("Bad Boys for Life", "{"overview": "Marcus and Mike are forced to confront new threats, career changes, and midlife crises as they join the newly created elite team AMMO of the Miami police department to take down the ruthless Armando Armas, the vicious leader of a Miami drug cartel.", "popularity": 180.005, "title": "Bad Boys for Life", "vote_average": 6.6, "vote_count": 463}", 0, True);
 insert into poll (movie_title, movie_details, votes, to_show) values ('1917', '{"overview": "At the height of the First World War, two young British soldiers, Schofield and Blake are given a seemingly impossible mission. In a race against time, they must cross enemy territory and deliver a message that will stop a deadly attack on hundreds of soldiers\u2014Blakes own brother among them.","popularity": 215.046,"title": "1917", "vote_average": 8.1, "vote_count": 1604}', 0, True);
 
 --add to events table
